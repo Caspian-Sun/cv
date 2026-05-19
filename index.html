@@ -40,6 +40,24 @@
     margin-bottom: 48px;
     padding-bottom: 36px;
     border-bottom: 2px solid var(--ink);
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    column-gap: 20px;
+    align-items: center;
+  }
+  .hero .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--green-1), var(--green-2));
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  }
+  .hero .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .hero h1 {
     font-size: clamp(32px, 6vw, 52px);
@@ -208,6 +226,11 @@
   /* ── Mobile ────────────────────────────────────── */
   @media (max-width: 600px) {
     .container { padding: 32px 16px 64px; }
+    .hero {
+      grid-template-columns: 72px 1fr;
+      column-gap: 14px;
+    }
+    .hero .avatar { width: 72px; height: 72px; }
     .hero .meta { font-size: 12px; }
     .hero .meta span + span::before { content: ""; display: block; }
   }
@@ -218,17 +241,22 @@
 <div class="container">
 
   <header class="hero">
-    <h1>孙道涛 <span class="en">Daotao Sun · Tom</span></h1>
-    <div class="role">
-      <span class="badge">FDE</span>Forward Deployed Engineer · 10 yrs · Hangzhou
+    <div class="avatar">
+      <img src="avatar.jpg" alt="Daotao Sun" />
     </div>
-    <div class="meta">
-      <span>📞 +86 132 8200 1310</span>
-      <span>✉️ <a href="mailto:459269440@qq.com">459269440@qq.com</a></span>
-      <span>💬 WeChat 13282001310</span>
-      <br/>
-      <span>🔗 <a href="https://github.com/Caspian-Sun">github.com/Caspian-Sun</a></span>
-      <span>🔗 <a href="https://www.linkedin.com/in/caspian-sun-404b6140b">LinkedIn</a></span>
+    <div>
+      <h1>孙道涛 <span class="en">Daotao Sun · Tom</span></h1>
+      <div class="role">
+        <span class="badge">FDE</span>Forward Deployed Engineer · 10 yrs · Hangzhou
+      </div>
+      <div class="meta">
+        <span>📞 +86 132 8200 1310</span>
+        <span>✉️ <a href="mailto:459269440@qq.com">459269440@qq.com</a></span>
+        <span>💬 WeChat 13282001310</span>
+        <br/>
+        <span>🔗 <a href="https://github.com/Caspian-Sun">github.com/Caspian-Sun</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/caspian-sun-404b6140b">LinkedIn</a></span>
+      </div>
     </div>
   </header>
 
