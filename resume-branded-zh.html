@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>孙道涛 · 简历 (品牌版)</title>
+<style>
+  /* ====================================================
+     Branded Style · 模仿原 PDF 的绿色品牌 + 两栏布局
+     适合: 国内传统 HR / Boss 直聘 / 拉勾 / 看脸的招聘场景
+     用法: 浏览器打开 → Cmd+P → 另存为 PDF
+            纸张 A4 · 边距 「无」 · 关闭页眉页脚
+     ==================================================== */
+
+  :root {
+    --bg: #ffffff;
+    --bg-page: #0a0a0a;
+    --green-1: #c5f070;     /* 黄绿 */
+    --green-2: #7dd87a;     /* 翠绿 */
+    --ink: #18181b;
+    --ink-2: #3f3f46;
+    --ink-3: #71717a;
+    --line: #e4e4e7;
+    --card: #ffffff;
+    --left-bg: #fafafa;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC",
+            "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg-page); }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    font-size: 10.5pt;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm 12mm;
+    margin: 12mm auto;
+    background: var(--bg-page);
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+    gap: 8mm;
+  }
+
+  /* ── 左栏 (深色, 含照片占位 + 联系方式) ───────────── */
+  .left {
+    background: var(--card);
+    border-radius: 14pt;
+    padding: 12pt 14pt;
+  }
+
+  .photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12pt;
+    background: linear-gradient(135deg, #d4d4d8, #a1a1aa);
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-size: 10pt;
+    margin-bottom: 12pt;
+    overflow: hidden;
+    position: relative;
+  }
+  .photo .hint {
+    font-family: var(--mono);
+    font-size: 8pt;
+    color: rgba(255,255,255,.9);
+    text-align: center;
+    padding: 0 8pt;
+  }
+  /* 用户替换照片时, 把上面 .photo 内的 .hint 删掉, 换成:
+     <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;" />
+     或在 .photo CSS 里加 background-image: url(your-photo.jpg); */
+
+  .left h3 {
+    font-size: 11.5pt;
+    margin: 12pt 0 4pt 0;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 3pt;
+  }
+  .left .info { font-size: 9.5pt; color: var(--ink-2); line-height: 1.7; }
+  .left .info b { color: var(--ink); }
+  .left .info code, .left .info a {
+    font-family: var(--mono);
+    font-size: 8.5pt;
+    word-break: break-all;
+    color: var(--ink-2);
+    text-decoration: none;
+  }
+
+  .target-block {
+    margin-top: 12pt;
+    padding: 8pt 10pt;
+    background: linear-gradient(135deg, var(--green-1), var(--green-2));
+    border-radius: 8pt;
+    color: var(--ink);
+  }
+  .target-block .label {
+    font-size: 8.5pt; text-transform: uppercase;
+    letter-spacing: 1pt; opacity: 0.7;
+  }
+  .target-block .val { font-weight: 700; font-size: 11pt; }
+
+  /* ── 右栏 (主内容) ────────────────────────────────── */
+  .right {
+    background: var(--card);
+    border-radius: 14pt;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* HELLO 头条 (绿色渐变) */
+  .hello-bar {
+    background: linear-gradient(135deg, var(--green-1), var(--green-2));
+    padding: 14pt 18pt;
+    color: var(--ink);
+  }
+  .hello-bar .hello {
+    font-size: 36pt; font-weight: 800; letter-spacing: -1pt; line-height: 1;
+  }
+  .hello-bar .name-row {
+    display: flex; align-items: baseline; gap: 8pt;
+    margin-top: 4pt;
+  }
+  .hello-bar .name { font-size: 16pt; font-weight: 700; }
+  .hello-bar .name-meta { font-size: 9.5pt; color: var(--ink-2); }
+
+  .main-body { padding: 12pt 18pt 14pt 18pt; }
+
+  /* Section */
+  h2.section {
+    font-size: 13pt; font-weight: 700;
+    color: var(--ink);
+    margin: 12pt 0 6pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 2px solid var(--ink);
+    letter-spacing: 0.5pt;
+  }
+  h2.section:first-of-type { margin-top: 0; }
+
+  .role-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 8pt 0 2pt 0;
+  }
+  .role-row .left-r { font-weight: 600; font-size: 10.5pt; color: var(--ink); }
+  .role-row .right-r {
+    color: var(--ink-3); font-size: 9pt; font-family: var(--mono);
+  }
+
+  p { margin: 3pt 0; color: var(--ink-2); }
+  ul { margin: 3pt 0 5pt 0; padding-left: 16pt; }
+  li { margin-bottom: 2pt; color: var(--ink-2); font-size: 10pt; }
+  li b, p b { color: var(--ink); }
+
+  .pitch {
+    background: #fafafa;
+    border-left: 3px solid var(--green-2);
+    padding: 7pt 10pt;
+    margin: 8pt 0 10pt 0;
+    font-size: 10pt;
+    color: var(--ink-2);
+    border-radius: 0 6pt 6pt 0;
+  }
+  .pitch b { color: var(--ink); }
+
+  /* Project block */
+  .proj { margin: 6pt 0 10pt 0; page-break-inside: avoid; }
+  .proj .title {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 2pt;
+  }
+  .proj .title .name { font-size: 10.5pt; font-weight: 600; color: var(--ink); }
+  .proj .title .link { font-size: 8.5pt; color: var(--ink-3); font-family: var(--mono); }
+  .proj .quote {
+    color: var(--ink-3); font-size: 9.5pt;
+    border-left: 2px solid var(--line);
+    padding-left: 8pt; margin: 3pt 0 4pt 0;
+  }
+
+  code {
+    font-family: var(--mono);
+    font-size: 9.5pt;
+    background: #f4f4f5;
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+  }
+
+  a { color: #166534; text-decoration: none; }
+
+  /* Print */
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body { background: white; }
+    .page {
+      margin: 0;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 8mm 6mm;
+      background: white;
+      gap: 6mm;
+    }
+    .left, .right {
+      box-shadow: none;
+    }
+    .no-print { display: none !important; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* Floating print button */
+  .print-btn {
+    position: fixed; right: 24px; bottom: 24px;
+    background: var(--green-2); color: var(--ink); border: 0;
+    padding: 10px 18px; border-radius: 999px;
+    font-family: var(--sans); font-size: 14px; font-weight: 600;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.3);
+  }
+  .print-btn:hover { background: var(--green-1); }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">
+  打印 / 另存为 PDF
+</button>
+
+<article class="page">
+
+  <!-- ── 左栏 ──────────────────────────────────────── -->
+  <aside class="left">
+    <div class="photo">
+      <div class="hint">
+        在这放你的照片<br/>
+        改 CSS .photo 加 background-image<br/>
+        或换成 &lt;img&gt; 标签
+      </div>
+    </div>
+
+    <h3>联系方式</h3>
+    <div class="info">
+      <b>电话</b> · 13282001310<br/>
+      <b>微信</b> · 13282001310<br/>
+      <b>邮箱</b> · 459269440@qq.com<br/>
+      <b>GitHub</b> · <a href="https://github.com/Caspian-Sun">Caspian-Sun</a><br/>
+      <b>LinkedIn</b> · <a href="https://www.linkedin.com/in/caspian-sun-404b6140b">caspian-sun</a>
+    </div>
+
+    <h3>求职信息</h3>
+    <div class="info">
+      <b>工作时长</b> · 10 年<br/>
+      <b>求职意向</b> · Forward Deployed Engineer / AI 应用工程师 / 解决方案工程师<br/>
+      <b>兼考虑</b> · 高级前端 / 前端架构师 / 全栈架构师<br/>
+      <b>期望薪资</b> · 35-60K<br/>
+      <b>期望城市</b> · 杭州 · 远程<br/>
+      <b>到岗时间</b> · 1 周内
+    </div>
+
+    <h3>个人优势</h3>
+    <div class="info" style="font-size:9pt;line-height:1.65;">
+      1、自研开源 AI 研发工作流方法论 (claude-code-workflow), 8 步法 + 硬闸门 + <code>@rules</code> 追溯链<br/>
+      2、跨栈全栈: TypeScript · Rust · Dart · Go · Python · Java · Node<br/>
+      3、前端 10 年: React / Next.js / Vue / TS · 移动 RN / Flutter / 鸿蒙 / 小程序<br/>
+      4、低代码 / 设计系统 8 年 (ServerUI / Formily / UiDraft)<br/>
+      5、带 20+ 人前端团队经验, 制定规范 + 培养梯队<br/>
+      6、熟悉 Claude / GPT / Gemini 的 prompt caching · tool use · MCP · Agent SDK<br/>
+      7、解决过 Vue+React+NG 同页沙箱、qiankun 兼容、动态组件加载等深水区问题<br/>
+      8、对技术底层原理有深入研究
+    </div>
+
+    <div class="target-block">
+      <div class="label">FDE Ready</div>
+      <div class="val">把 AI 落到你的业务里, 而不是做 demo</div>
+    </div>
+  </aside>
+
+  <!-- ── 右栏 ──────────────────────────────────────── -->
+  <main class="right">
+    <div class="hello-bar">
+      <div class="hello">HELLO</div>
+      <div class="name-row">
+        <div class="name">孙道涛</div>
+        <div class="name-meta">男 · 34 岁 · 杭州 · 10 年经验</div>
+      </div>
+    </div>
+
+    <div class="main-body">
+
+      <div class="pitch">
+        10 年技术 + 团队管理经验, 近 1 年深入 AI 工程化, <b>独立设计并落地了一套 AI 研发工作流方法论</b> (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>), 已在前端 (React/UmiJS) / 桌面 (Tauri + Rust) / 移动 (Flutter 三端) 三个完全不同的形态上跑通生产级项目。擅长把通用 AI 能力封装成具体行业可用的工程方案。
+      </div>
+
+      <h2 class="section">代表项目</h2>
+
+      <div class="proj">
+        <div class="title">
+          <span class="name">claude-code-workflow · AI 研发工作流方法论</span>
+          <span class="link">github.com/Caspian-Sun/claude-code-workflow</span>
+        </div>
+        <div class="quote">把 "需求 → 设计 → 代码 → 测试 → 上线" 全链路拆成可追溯的命令、技能、子代理和规则, 由 AI 执行, 人监督每个关键节点。</div>
+        <ul>
+          <li><b>8 步法 + 硬闸门</b>: PRD-check / plan-check 等硬阻断, AI 无法默默跳过</li>
+          <li><b>追溯链</b>: PRD 锚点 → 任务 ID → 源码 <code>@rules</code> → 测试 <code>it()</code></li>
+          <li><b>五件套</b>: Commands + Skills + Subagents + Hooks + Rules, 边界清晰</li>
+          <li><b>跨域可移植</b>: 3 个完全不同的栈上跑通, 框架本体一行没改</li>
+          <li>开源 · 中英双语 · MIT 协议</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="title">
+          <span class="name">Cpcash Wallet · Web3 钱包 (Flutter 三端)</span>
+          <span class="link">私有仓库 · 可联系展示</span>
+        </div>
+        <div class="quote">加密钱包, 一份 Dart 代码同时分发 Android / iOS / 鸿蒙 OHOS。</div>
+        <ul>
+          <li><b>138 commits · 13 天</b> 交付 Phase 1, dev + staging 已发版, 二期进行中</li>
+          <li><b>167 任务 100% 完成可追溯</b> (account 32 · assets 23 · home 41 · transfer 28 · receive 43)</li>
+          <li>4 个结构化 bug 报告全闭环修复, bug 密度 ≈ 2.4%</li>
+          <li>BIP39 助记词 · BIP44 派生 · EVM 多链转账收款 · 私钥本地化 · 多钱包并存</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="title">
+          <span class="name">Spider · Tauri 桌面元工具</span>
+          <span class="link">github.com/Caspian-Sun/spider</span>
+        </div>
+        <div class="quote">用方法论造出来的、用来可视化方法论的桌面工具 — dogfooding + 自指。</div>
+        <ul>
+          <li><b>Tauri 2 + Rust 后端</b> (PTY/scan/watcher/IPC) + React 前端 (15 个 feature 模块)</li>
+          <li>把 <code>.claude/commands/</code> 工作流可视化成 DAG 看板, 每张卡片承载真实 PTY 会话</li>
+          <li>证明 <code>@prd / @task / @rules</code> 追溯链在 TS + Rust 双栈通用</li>
+        </ul>
+      </div>
+
+      <h2 class="section">工作经历</h2>
+
+      <div class="role-row"><span class="left-r">有赞 (杭州知擎信息科技) · 前端开发工程师</span><span class="right-r">2024.11 - 2025.04</span></div>
+      <ul>
+        <li>主导 <b>UiDraft</b> 底层设计系统编写与维护, 标准化 UI 组件提升跨平台体验一致性</li>
+        <li>参与 <b>UXtwo AI</b> 智能推荐 + 自动化界面生成, 落地 AI 优化设计师工作流</li>
+        <li>独立产出 <b>UIdraft Chrome 插件</b> (React + TS), 基于 DFS/DSF 实现多组件层级关系识别</li>
+      </ul>
+
+      <div class="role-row"><span class="left-r">浙商银行 财资项目 · 前端架构师 <span style="color:var(--ink-3);font-size:9pt;">(神州信息派驻)</span></span><span class="right-r">2023.10 - 2024.11</span></div>
+      <ul>
+        <li>制定前端开发规范, 团队 <b>PR review 周期 3 天 → 6 小时</b></li>
+        <li>攻克 qiankun 框架向下兼容 (proxy) 难题</li>
+        <li>优化首屏加载: <b>5000ms → 200ms (25x 提升)</b></li>
+        <li>主导脱兔低代码平台 + 集成 S2 大数据表格 + React 模块嵌入 Vue 老项目</li>
+        <li>搭建组件服务中心 (借鉴 ServerUI 思路), 用户在线实时加载组件</li>
+      </ul>
+
+      <div class="role-row"><span class="left-r">杭州亦城亦村 (创业) · 技术经理</span><span class="right-r">2023.02 - 2023.08</span></div>
+      <ul>
+        <li>核心产品 <b>分巢</b>: 积分 App, 主/被动扫码支付, 微信小程序 + 安卓 + iOS 三端</li>
+        <li>前端 uniapp/RN/React/Canvas (后期 Flutter 重构) · 后端 Go(gin) + MySQL + MongoDB + Redis</li>
+        <li>独立完成全栈开发 + 项目规划 + 地推</li>
+      </ul>
+
+      <div class="role-row"><span class="left-r">品茗科技 · 全栈工程师 (前端 Leader)</span><span class="right-r">2021.10 - 2023.01</span></div>
+      <ul>
+        <li>带前端团队, 主导前端架构 + 低代码平台 + BI 大屏 + 微服务前端</li>
+        <li><b>元笔</b>: Formily 二开实现表单可视化拖拽; <b>巡检</b>: 建筑行业日检 Web + 小程序 + H5 全端</li>
+        <li>BI 大屏核心组件 · 优化 CDN 解决国内+香港地区资源加载 · 数字建造业务线小程序/H5/App</li>
+      </ul>
+
+      <div class="role-row"><span class="left-r">杭州览众数据 · 全栈工程师 → 前端 Leader</span><span class="right-r">2018.08 - 2021.10</span></div>
+      <ul>
+        <li><b>ServerUI 低代码平台</b> (2020.11 至今): Vue/React/Angular 同页运行的沙箱隔离机制; 在线 Fx (借鉴 serverless); <a href="https://blog.csdn.net/u014080304/article/details/114393458">CSDN 设计思考长文</a></li>
+        <li><b>商品通 SaaS</b> (服装零售供应链): qiankun + Vue2/Vue3/TS 新旧系统兼容</li>
+        <li><b>dataflow</b>: d3.js + dag.js 数仓脚本依赖可视化, 数百节点快速渲染</li>
+        <li><b>零售业务线</b>: 留夫鸭 · 李宁 · 太平鸟 · 一鸣 · 生鲜 · Bee 招聘等多个项目</li>
+      </ul>
+
+      <div class="role-row"><span class="left-r">软通动力 · 前端开发工程师</span><span class="right-r">2015.07 - 2018.07</span></div>
+      <ul>
+        <li>驻场支付宝相关系统前端开发, 页面设计 + 交互实现 + 性能优化</li>
+      </ul>
+
+      <h2 class="section">教育经历</h2>
+      <div class="role-row">
+        <span class="left-r">上饶师范学院 · 本科 · 美术学 (主修) + 计算机 (副修)</span>
+        <span class="right-r">2011 - 2015</span>
+      </div>
+      <p style="font-size:9.5pt;color:var(--ink-3);margin-top:2pt;">美术 → 设计敏感 → 设计系统工程化 → AI + 设计工具, 这是我做 AI 应用工程时的差异化优势。</p>
+
+    </div>
+  </main>
+
+</article>
+
+</body>
+</html>

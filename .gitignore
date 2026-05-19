@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Local files
+*.pdf            # 生成的 PDF 不入库, 每次需要时打印即可
+*.bak
+*.tmp
+
+# Personal photos (用户决定要不要入库时再开)
+# photo.jpg
+# avatar.png

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Daotao Sun (Tom) — Forward Deployed Engineer</title>
+<style>
+  /* ====================================================
+     Senior Simple Style · English · Print Letter / A4
+     Open in browser → Cmd+P → "Save as PDF"
+     Paper: A4 or US Letter · Margins: None / Minimum
+     Disable headers/footers
+     ==================================================== */
+
+  :root {
+    --ink: #18181b;
+    --ink-2: #3f3f46;
+    --ink-3: #71717a;
+    --line: #d4d4d8;
+    --line-2: #e4e4e7;
+    --accent: #166534;
+    --bg: #ffffff;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+            "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f4f4f5; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    font-size: 10.5pt;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm 16mm 18mm;
+    margin: 12mm auto;
+    background: var(--bg);
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+
+  header.h-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+  }
+  header.h-top h1 {
+    margin: 0;
+    font-size: 26pt;
+    font-weight: 700;
+    letter-spacing: -0.3pt;
+  }
+  header.h-top .sub {
+    color: var(--ink-3);
+    font-size: 10pt;
+    margin-top: 4pt;
+    font-family: var(--mono);
+  }
+  header.h-top .meta {
+    text-align: right;
+    font-size: 9.5pt;
+    color: var(--ink-2);
+    line-height: 1.6;
+    font-family: var(--mono);
+  }
+  header.h-top .meta a { color: var(--accent); text-decoration: none; }
+
+  .target {
+    padding: 8pt 0 6pt 0;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 12pt;
+    font-size: 10pt;
+    color: var(--ink-2);
+  }
+  .target b { color: var(--ink); }
+
+  h2 {
+    font-size: 12pt;
+    margin: 14pt 0 6pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 1px solid var(--ink);
+    letter-spacing: 0.5pt;
+    text-transform: uppercase;
+  }
+  h2:first-of-type { margin-top: 0; }
+
+  .role-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 10pt 0 2pt 0;
+  }
+  .role-row .left { font-weight: 600; font-size: 10.5pt; }
+  .role-row .right { color: var(--ink-3); font-size: 9.5pt; font-family: var(--mono); }
+
+  p { margin: 4pt 0; color: var(--ink-2); }
+  ul { margin: 4pt 0 6pt 0; padding-left: 16pt; }
+  li { margin-bottom: 2pt; color: var(--ink-2); }
+  li b, p b { color: var(--ink); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .pitch {
+    background: #fafafa;
+    border-left: 3px solid var(--ink);
+    padding: 8pt 12pt;
+    margin: 10pt 0 14pt 0;
+    font-size: 10pt;
+    color: var(--ink-2);
+  }
+  .pitch b { color: var(--ink); }
+
+  table.skills {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4pt 0 8pt 0;
+    font-size: 10pt;
+  }
+  table.skills td {
+    vertical-align: top;
+    padding: 5pt 8pt 5pt 0;
+    border-top: 1px solid var(--line-2);
+  }
+  table.skills tr:first-child td { border-top: none; }
+  table.skills td:first-child {
+    width: 110pt;
+    color: var(--ink);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  table.skills td:last-child { color: var(--ink-2); }
+
+  .proj {
+    margin: 8pt 0 12pt 0;
+    page-break-inside: avoid;
+  }
+  .proj .title {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 2pt;
+  }
+  .proj .title .name {
+    font-size: 11pt; font-weight: 600;
+  }
+  .proj .title .link {
+    font-size: 9pt; color: var(--ink-3); font-family: var(--mono);
+  }
+  .proj .quote {
+    color: var(--ink-3);
+    font-size: 9.5pt;
+    border-left: 2px solid var(--line);
+    padding-left: 8pt;
+    margin: 4pt 0;
+    font-style: italic;
+  }
+
+  .footnote {
+    font-size: 8.5pt; color: var(--ink-3);
+    margin-top: 14pt; border-top: 1px solid var(--line);
+    padding-top: 6pt;
+  }
+
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body { background: white; }
+    .page {
+      margin: 0; width: 210mm; min-height: 297mm; box-shadow: none;
+    }
+    .no-print { display: none !important; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  .print-btn {
+    position: fixed; right: 24px; bottom: 24px;
+    background: #18181b; color: white; border: 0;
+    padding: 10px 18px; border-radius: 999px;
+    font-family: var(--sans); font-size: 14px;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  }
+  .print-btn:hover { background: #3f3f46; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">
+  Print / Save as PDF
+</button>
+
+<article class="page">
+
+  <header class="h-top">
+    <div>
+      <h1>Daotao Sun <span style="font-weight:400;color:var(--ink-3);font-size:13pt;">(Tom)</span></h1>
+      <div class="sub">Forward Deployed Engineer · 10 yrs · Hangzhou, China · Open to remote</div>
+    </div>
+    <div class="meta">
+      📞 +86 132 8200 1310<br/>
+      ✉️ 459269440@qq.com<br/>
+      🔗 <a href="https://github.com/Caspian-Sun">github.com/Caspian-Sun</a><br/>
+      🔗 <a href="https://www.linkedin.com/in/caspian-sun-404b6140b">LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="target">
+    <b>Target roles</b> — Forward Deployed Engineer · Applied AI Engineer · Solutions Engineer · Senior Frontend / Frontend Architect (alternate)<br/>
+    <b>Availability</b> — within 1 week · open to remote-first or relocation
+  </div>
+
+  <div class="pitch">
+    10-year full-stack engineer and team lead. Spent the past year designing and shipping an open-source AI R&D methodology (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>) and applying it, unchanged, across three completely different stacks — <b>React/UmiJS (web), Tauri + Rust (desktop), and Flutter (Android + iOS + HarmonyOS)</b>. I turn generic AI capabilities into production engineering workflows for specific verticals — exactly what an FDE does.
+  </div>
+
+  <h2>Highlights</h2>
+
+  <table class="skills">
+    <tr><td>AI Engineering</td><td>Self-built 8-step SDLC framework with hard gates and <code>@rules</code> traceability chain; deep familiarity with Claude / GPT / Gemini including prompt caching, tool use, agent workflow, MCP</td></tr>
+    <tr><td>Stack range</td><td>TypeScript · Rust · Dart · Go · Python · Java · Node; same methodology powers React / Tauri / Flutter without core rewrite</td></tr>
+    <tr><td>Low-code / Architecture</td><td>8 years on low-code platforms and design systems (ServerUI, Formily fork, Youzan UiDraft); solved Vue+React+Angular same-page sandbox, dynamic component loading, qiankun compatibility</td></tr>
+    <tr><td>People leadership</td><td>Led frontend teams of 20+ engineers (Pinming, Lanzhong); owned hiring, code review, perf evaluations, tech roadmap</td></tr>
+    <tr><td>Cross-discipline</td><td>BA in Fine Arts + minor in CS; strong design intuition for AI-assisted tooling (UIdraft Chrome extension, Figma uiobject DSL)</td></tr>
+    <tr><td>Verticals shipped</td><td>Finance (Zheshang Bank treasury) · Construction (Pinming) · Retail SaaS (Shangpintong, Li-Ning, Peacebird) · Web3 (Cpcash) · Design tooling (Youzan UiDraft)</td></tr>
+  </table>
+
+  <h2>Featured Projects</h2>
+
+  <div class="proj">
+    <div class="title">
+      <span class="name">claude-code-workflow — AI R&D Methodology Framework</span>
+      <span class="link">github.com/Caspian-Sun/claude-code-workflow</span>
+    </div>
+    <div class="quote">Breaks "Requirements → Design → Code → Test → Deploy" into traceable commands, skills, subagents, and rules. AI executes; humans gate every critical checkpoint.</div>
+    <ul>
+      <li><b>Why this is FDE work</b>: This whole project is a Forward Deployed engagement with my own team — taking a generic AI capability (Claude Code CLI) and turning it into a production workflow for a specific vertical (software R&D).</li>
+      <li><b>8-step SDLC pipeline</b> (<code>/prd → /plan → /code → /test → /review → /build → /deploy → /release</code>) with hard gates (<code>prd-check</code>, <code>plan-check</code>) that AI cannot silently skip</li>
+      <li><b>Traceability chain</b>: PRD anchor → task ID → source <code>@prd/@rules</code> → test <code>it()</code>. Change any link, scan downstream automatically.</li>
+      <li><b>Five-part architecture</b>: Commands (decisions) + Skills (scripts) + Subagents (parallel/isolated context) + Hooks (silent guards) + Rules (long-term constraints)</li>
+      <li><b>Cross-domain portable</b>: Same framework powers three different projects (frontend/desktop/mobile) without a single line of core rewrite</li>
+      <li>Open source · MIT license · bilingual EN/ZH docs · full GitHub packaging</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="title">
+      <span class="name">Cpcash Wallet — Web3 Mobile Wallet (Flutter, 3 OSes)</span>
+      <span class="link">private repo · walkthrough on request</span>
+    </div>
+    <div class="quote">Crypto wallet shipping from a single Dart codebase to Android, iOS, and HarmonyOS.</div>
+    <ul>
+      <li><b>Scale</b>: 138 commits in 13 days, every commit tagged with a task ID (<code>T001-T043 — 43/43 = 100%</code>)</li>
+      <li><b>Execution fidelity</b>: 167 tasks closed at 100% across 5 modules (account / assets / home / transfer / receive)</li>
+      <li><b>Quality</b>: 4 structured bug reports, all closed-loop. Bug density ≈ 2.4% — low for Web3.</li>
+      <li><b>Cross-platform</b>: HarmonyOS-specific <code>MissingPluginException</code> resolved in-line without forking a platform branch</li>
+      <li><b>Domain depth</b>: BIP39 mnemonics, BIP44 derivation, EVM multi-chain transfer/receive, local key custody, multi-wallet</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="title">
+      <span class="name">Spider — Tauri Desktop Meta-Tool</span>
+      <span class="link">github.com/Caspian-Sun/spider</span>
+    </div>
+    <div class="quote">A desktop tool that visualizes any <code>claude-code-workflow</code> repo as a kanban — a tool built with the methodology to render the methodology. Dogfooding + self-referential.</div>
+    <ul>
+      <li><b>Stack</b>: Tauri 2 + Rust backend (PTY / scan / watcher / IPC) + React frontend (15 feature modules)</li>
+      <li>Visualizes <code>.claude/commands/</code> workflows as a DAG kanban — one lane per <code>/command</code>, one card per real PTY session</li>
+      <li>Proves the methodology's <code>@prd / @task / @rules</code> chain works identically across TS and Rust</li>
+    </ul>
+  </div>
+
+  <h2>Experience</h2>
+
+  <div class="role-row"><span class="left">Youzan / Zhiqing Information Tech · Frontend Engineer</span><span class="right">Nov 2024 - Apr 2025</span></div>
+  <ul>
+    <li>Led <b>UiDraft</b> design system development and maintenance; standardized cross-platform UI consistency</li>
+    <li>Contributed to <b>UXtwo AI</b>: smart recommendations and auto-generated UI flows</li>
+    <li>Shipped <b>UIdraft Chrome extension</b> (React + TS) — DFS/DSF-based component hierarchy detection for complex cross-merge scenarios</li>
+  </ul>
+
+  <div class="role-row"><span class="left">Zheshang Bank Treasury · Frontend Architect <span style="color:var(--ink-3);font-size:9pt;">(on-site via Shenzhou Digital)</span></span><span class="right">Oct 2023 - Nov 2024</span></div>
+  <ul>
+    <li>Authored frontend engineering standards; <b>PR review cycle: 3 days → 6 hours</b></li>
+    <li>Solved <code>qiankun</code> micro-frontend's <code>Proxy</code> polyfill issue for legacy browser support</li>
+    <li><b>Cut initial render from 5,000ms to 200ms (25x)</b> by analyzing the call/resource tree and pruning unused assets per business path</li>
+    <li>Led the Tuotu low-code platform delivery; integrated S2 large-grid component; embedded React modules inside the legacy Vue codebase without rewrites</li>
+    <li>Built an online component service center (inspired by ServerUI), letting users hot-load components</li>
+  </ul>
+
+  <div class="role-row"><span class="left">Yichengyicun (Startup) · Engineering Manager</span><span class="right">Feb 2023 - Aug 2023</span></div>
+  <ul>
+    <li>End-to-end ownership of <b>Fenchao</b>, a loyalty-points app: active/passive QR-code payment, three platforms (WeChat MiniApp + Android + iOS)</li>
+    <li>Frontend: uniapp / React Native / React / Canvas (refactored to Flutter — custom widgets + container layout) · Backend: Go (gin) + MySQL + MongoDB + Redis + Nginx</li>
+    <li>Owned full-stack development, project planning, and on-the-ground customer rollout</li>
+  </ul>
+
+  <div class="role-row"><span class="left">Pinming Technology · Full-Stack Engineer</span><span class="right">Oct 2021 - Jan 2023</span></div>
+  <ul>
+    <li>Led the frontend team; owned architecture, low-code platform, BI dashboards, micro-services frontend</li>
+    <li><b>Yuanbi</b>: Forked Formily into a visual drag-and-drop form designer; non-engineers can author forms independently</li>
+    <li><b>Xunjian (Inspection)</b>: Construction-industry daily inspection across web + mini-program + H5 (React/Antd/Umi + uniapp + Vue2/Vue3)</li>
+    <li>BI dashboard core components · CDN optimization for mainland China + Hong Kong · digital construction line (mini-program + H5 + App)</li>
+  </ul>
+
+  <div class="role-row"><span class="left">Hangzhou Lanzhong Data · Full-Stack Engineer → Frontend Lead</span><span class="right">Aug 2018 - Oct 2021</span></div>
+  <ul>
+    <li><b>ServerUI (low-code platform)</b> — self-built, maintained since Nov 2020: MVVM data center + custom module loader <code>relation</code>; <b>Vue / React / Angular running on the same page</b> with compile-time + runtime sandbox isolation; online "Fx" runtime decompiling component lifecycle for hot extensibility (inspired by serverless); <a href="https://blog.csdn.net/u014080304/article/details/114393458">design write-up on CSDN</a></li>
+    <li><b>Shangpintong SaaS</b> (apparel & retail supply chain): qiankun + Vue2/Vue3/TS legacy/new coexistence; node-based micro-service frontend gateway</li>
+    <li><b>dataflow</b>: d3.js + dag.js visualization of warehouse script dependencies; fast render across hundreds of nodes</li>
+    <li>Internal tooling: ci/cd scaffolds + install/uninstall tools for internal-source packages (tricky: rollback module state by diffing old vs new config snapshots)</li>
+    <li>Retail line: Liufuya / Li-Ning / Peacebird / Yiming / Bee recruitment systems, with large-data Canvas-based tables and Echart re-wrappers</li>
+  </ul>
+
+  <div class="role-row"><span class="left">iSoftStone · Frontend Engineer</span><span class="right">Jul 2015 - Jul 2018</span></div>
+  <ul>
+    <li>On-site at Alipay: frontend development, interaction implementation, performance optimization</li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="role-row">
+    <span class="left">Shangrao Normal University · BA · Major: Fine Arts · Minor: Computer Science</span>
+    <span class="right">2011 - 2015</span>
+  </div>
+  <p style="font-size:9.5pt;color:var(--ink-3);margin-top:2pt;">Fine Arts → design sensibility → design-system engineering → AI + design tooling (UIdraft / Figma uiobject DSL). This trajectory is the differentiator for design-aware applied AI work.</p>
+
+  <h2>Writing / Output</h2>
+  <ul>
+    <li>ServerUI low-code design notes — <a href="https://blog.csdn.net/u014080304/article/details/114393458">CSDN long-form (Chinese)</a></li>
+    <li><code>claude-code-workflow</code> methodology — bilingual docs at the GitHub repo</li>
+    <li><i>In progress: a series on "Three counterintuitive design choices in shipping AI workflows"</i></li>
+  </ul>
+
+  <div class="footnote">
+    Generated from an HTML template · print to PDF in browser · edit source <code>resume-senior-en.html</code> to update
+  </div>
+
+</article>
+
+</body>
+</html>

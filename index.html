@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daotao Sun (Tom) — CV</title>
+<meta name="description" content="Forward Deployed Engineer · 10 yrs · Hangzhou. CV in three versions: senior simple (EN), senior simple (ZH), and branded (ZH)." />
+<meta property="og:title" content="Daotao Sun (Tom) — CV" />
+<meta property="og:description" content="Forward Deployed Engineer · 10 yrs. Three resume versions for different audiences." />
+<meta property="og:type" content="profile" />
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --ink-2: #3f3f46;
+    --ink-3: #71717a;
+    --line: #e4e4e7;
+    --line-2: #f4f4f5;
+    --bg: #fafafa;
+    --green-1: #c5f070;
+    --green-2: #7dd87a;
+    --accent: #166534;
+    --card: #ffffff;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC",
+            "Microsoft YaHei", "Helvetica Neue", "Segoe UI", sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 840px; margin: 0 auto; padding: 48px 24px 96px; }
+
+  .hero {
+    margin-bottom: 48px;
+    padding-bottom: 36px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+  .hero h1 .en {
+    color: var(--ink-3);
+    font-weight: 400;
+    font-size: 0.6em;
+    margin-left: 12px;
+  }
+  .hero .role {
+    margin-top: 14px;
+    font-size: 18px;
+    color: var(--ink-2);
+    font-family: var(--mono);
+  }
+  .hero .role .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--green-1), var(--green-2));
+    color: var(--ink);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .hero .meta {
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--ink-3);
+    font-family: var(--mono);
+  }
+  .hero .meta a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hero .meta a:hover { text-decoration: underline; }
+  .hero .meta span + span::before { content: " · "; }
+
+  h2 {
+    font-size: 22px;
+    margin: 48px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  h2:first-of-type { margin-top: 0; }
+
+  p { color: var(--ink-2); margin: 8px 0; }
+  p b { color: var(--ink); }
+
+  /* ── Resume cards grid ──────────────────────────── */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform .12s ease, box-shadow .12s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    border-color: var(--ink-3);
+  }
+  .card .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .card .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .card .desc {
+    font-size: 13px;
+    color: var(--ink-2);
+    flex: 1;
+  }
+  .card .arrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+  }
+  .card.featured {
+    background: linear-gradient(135deg, var(--green-1), var(--green-2));
+    border-color: var(--green-2);
+  }
+  .card.featured .tag { color: var(--ink-2); }
+  .card.featured .title { color: var(--ink); }
+  .card.featured .desc { color: var(--ink-2); }
+  .card.featured .arrow { color: var(--ink); font-weight: 600; }
+
+  /* ── Projects list ─────────────────────────────── */
+  .proj {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .proj .name {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .proj .name a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .proj .name a:hover {
+    border-bottom-color: var(--ink);
+  }
+  .proj .name .ext { color: var(--ink-3); font-size: 12px; margin-left: 6px; font-family: var(--mono); font-weight: 400; }
+  .proj .desc { color: var(--ink-2); font-size: 14px; margin-top: 4px; }
+  .proj .stats {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+  }
+  .proj .stats b { color: var(--accent); }
+
+  /* ── Pitch quote ───────────────────────────────── */
+  .pitch {
+    background: var(--card);
+    border-left: 4px solid var(--ink);
+    padding: 18px 24px;
+    margin: 32px 0;
+    font-size: 16px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    border-radius: 0 8px 8px 0;
+  }
+  .pitch b { color: var(--ink); }
+  .pitch a { color: var(--accent); }
+
+  /* ── Footer ────────────────────────────────────── */
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-3);
+    text-align: center;
+  }
+  footer .quote {
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  /* ── Mobile ────────────────────────────────────── */
+  @media (max-width: 600px) {
+    .container { padding: 32px 16px 64px; }
+    .hero .meta { font-size: 12px; }
+    .hero .meta span + span::before { content: ""; display: block; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="hero">
+    <h1>孙道涛 <span class="en">Daotao Sun · Tom</span></h1>
+    <div class="role">
+      <span class="badge">FDE</span>Forward Deployed Engineer · 10 yrs · Hangzhou
+    </div>
+    <div class="meta">
+      <span>📞 +86 132 8200 1310</span>
+      <span>✉️ <a href="mailto:459269440@qq.com">459269440@qq.com</a></span>
+      <span>💬 WeChat 13282001310</span>
+      <br/>
+      <span>🔗 <a href="https://github.com/Caspian-Sun">github.com/Caspian-Sun</a></span>
+      <span>🔗 <a href="https://www.linkedin.com/in/caspian-sun-404b6140b">LinkedIn</a></span>
+    </div>
+  </header>
+
+  <div class="pitch">
+    10-year full-stack engineer and team lead. Spent the past year designing and shipping an open-source AI R&D methodology
+    (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>) and applying it, unchanged, across three completely different stacks —
+    <b>React/UmiJS (web), Tauri + Rust (desktop), and Flutter (Android + iOS + HarmonyOS)</b>.
+    I turn generic AI capabilities into production engineering workflows for specific verticals — exactly what an FDE does.
+  </div>
+
+  <h2>📄 Read the resume</h2>
+  <p>Three versions for different audiences. Pick the one that fits where you found me.</p>
+
+  <div class="cards">
+    <a class="card featured" href="resume-senior-en.html">
+      <div class="tag">EN · Senior Simple</div>
+      <div class="title">For overseas FDE roles</div>
+      <div class="desc">Clean black-and-white layout. Best for Anthropic / OpenAI / Scale AI / LinkedIn applications.</div>
+      <div class="arrow">Open →</div>
+    </a>
+    <a class="card" href="resume-senior-zh.html">
+      <div class="tag">ZH · Senior Simple</div>
+      <div class="title">中文简洁版</div>
+      <div class="desc">同样简洁风, 国内 AI 公司 / 字节豆包 / 智谱 / MiniMax / Moonshot / 大厂 AI 应用层。</div>
+      <div class="arrow">打开 →</div>
+    </a>
+    <a class="card" href="resume-branded-zh.html">
+      <div class="tag">ZH · Branded</div>
+      <div class="title">中文品牌版</div>
+      <div class="desc">两栏 + 绿色头条 + 照片占位。适合国内传统 HR / Boss 直聘 / 拉勾。</div>
+      <div class="arrow">打开 →</div>
+    </a>
+  </div>
+
+  <p style="font-size:13px;color:var(--ink-3);">
+    <b>需要 PDF?</b> 打开任一版本 → <code>Cmd+P</code> → "另存为 PDF" → 纸张 A4 · 边距「无」 · 取消勾选页眉页脚。
+  </p>
+
+  <h2>🎯 Currently looking for</h2>
+  <p>
+    <b>Forward Deployed Engineer</b> / <b>Applied AI Engineer</b> / <b>Solutions Engineer</b> roles at AI infrastructure companies, AI-native startups, or consultancies deploying AI into real customer workflows.
+  </p>
+  <p>Open to remote · based in Hangzhou, China · willing to relocate · 1-week notice.</p>
+
+  <h2>🔗 Featured projects</h2>
+
+  <div class="proj">
+    <div class="name">
+      <a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>
+      <span class="ext">↗ GitHub · open source · bilingual</span>
+    </div>
+    <div class="desc">An AI-driven R&D methodology framework. Breaks "Requirements → Design → Code → Test → Deploy" into traceable commands, skills, subagents, and rules. 8-step SDLC with hard gates and a five-part collaboration architecture.</div>
+    <div class="stats"><b>Cross-stack</b>: re-applied without core rewrite across React / Tauri+Rust / Flutter</div>
+  </div>
+
+  <div class="proj">
+    <div class="name">
+      <a href="https://github.com/Caspian-Sun/spider">spider</a>
+      <span class="ext">↗ GitHub · Tauri 2 + Rust</span>
+    </div>
+    <div class="desc">A desktop tool that visualizes any claude-code-workflow repo as a kanban. A meta-tool: built with the methodology to render the methodology.</div>
+    <div class="stats">Rust backend (PTY · scan · watcher · IPC) + React frontend (15 feature modules)</div>
+  </div>
+
+  <div class="proj">
+    <div class="name">
+      Cpcash Wallet
+      <span class="ext">private repo · walkthrough on request</span>
+    </div>
+    <div class="desc">Web3 mobile wallet shipping from a single Flutter codebase to Android, iOS, and HarmonyOS.</div>
+    <div class="stats"><b>138 commits</b> · <b>167 tasks closed at 100%</b> · <b>13 days</b> from init to dev+staging release</div>
+  </div>
+
+  <h2>📫 Get in touch</h2>
+  <p>The fastest way to reach me:</p>
+  <ul style="color:var(--ink-2); line-height:1.9;">
+    <li>📧 <b><a href="mailto:459269440@qq.com" style="color:var(--accent);text-decoration:none;">459269440@qq.com</a></b> (English / Chinese both fine)</li>
+    <li>💬 WeChat: <b>13282001310</b></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/caspian-sun-404b6140b" style="color:var(--accent);text-decoration:none;">LinkedIn</a></li>
+  </ul>
+  <p>I respond within 24h.</p>
+
+  <footer>
+    <div class="quote">"Generic AI is impressive. AI deployed into someone's actual workflow is useful. That's the only gap that matters."</div>
+    <div>Source on <a href="https://github.com/Caspian-Sun/cv" style="color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line);">github.com/Caspian-Sun/cv</a></div>
+  </footer>
+
+</div>
+
+</body>
+</html>

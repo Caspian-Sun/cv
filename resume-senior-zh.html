@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>孙道涛 · FDE 简历</title>
+<style>
+  /* ====================================================
+     Senior Simple Style · Chinese · Print A4
+     用法: 浏览器打开 → Cmd+P → 目的地选「另存为 PDF」
+            纸张 A4 · 边距 「无」 或 「最小」 · 关闭页眉页脚
+     ==================================================== */
+
+  :root {
+    --ink: #18181b;
+    --ink-2: #3f3f46;
+    --ink-3: #71717a;
+    --line: #d4d4d8;
+    --line-2: #e4e4e7;
+    --accent: #166534;     /* 仅作链接 / 强调点缀, 不当背景 */
+    --bg: #ffffff;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC",
+            "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f4f4f5; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    font-size: 11pt;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm 16mm 18mm;
+    margin: 12mm auto;
+    background: var(--bg);
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+
+  /* ── 顶部姓名条 ───────────────────────────────────── */
+  header.h-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+  }
+  header.h-top h1 {
+    margin: 0;
+    font-size: 26pt;
+    font-weight: 700;
+    letter-spacing: 0.5pt;
+  }
+  header.h-top .sub {
+    color: var(--ink-3);
+    font-size: 10pt;
+    margin-top: 4pt;
+    font-family: var(--mono);
+  }
+  header.h-top .meta {
+    text-align: right;
+    font-size: 9.5pt;
+    color: var(--ink-2);
+    line-height: 1.6;
+    font-family: var(--mono);
+  }
+  header.h-top .meta a { color: var(--accent); text-decoration: none; }
+
+  /* ── 求职意向条 ───────────────────────────────────── */
+  .target {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 18pt;
+    align-items: baseline;
+    padding: 8pt 0 6pt 0;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 12pt;
+    font-size: 10.5pt;
+  }
+  .target b { color: var(--ink); }
+  .target span { color: var(--ink-2); }
+
+  /* ── Section 标题 ─────────────────────────────────── */
+  h2 {
+    font-size: 12.5pt;
+    margin: 14pt 0 6pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 1px solid var(--ink);
+    letter-spacing: 0.5pt;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-size: 11pt;
+    margin: 10pt 0 2pt 0;
+    font-weight: 600;
+  }
+  h3 .meta {
+    font-weight: 400;
+    color: var(--ink-3);
+    font-size: 10pt;
+    margin-left: 6pt;
+  }
+  .role-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 10pt 0 2pt 0;
+  }
+  .role-row .left { font-weight: 600; font-size: 11pt; }
+  .role-row .right { color: var(--ink-3); font-size: 10pt; font-family: var(--mono); }
+
+  /* ── 段落与列表 ───────────────────────────────────── */
+  p { margin: 4pt 0; color: var(--ink-2); }
+  ul { margin: 4pt 0 6pt 0; padding-left: 18pt; }
+  li { margin-bottom: 2pt; color: var(--ink-2); }
+  li b, p b { color: var(--ink); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ── 强调小卡片 (一句话定位) ───────────────────────── */
+  .pitch {
+    background: #fafafa;
+    border-left: 3px solid var(--ink);
+    padding: 8pt 12pt;
+    margin: 10pt 0 14pt 0;
+    font-size: 10.5pt;
+    color: var(--ink-2);
+  }
+  .pitch b { color: var(--ink); }
+
+  /* ── 核心能力表 ───────────────────────────────────── */
+  table.skills {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4pt 0 8pt 0;
+    font-size: 10.5pt;
+  }
+  table.skills td {
+    vertical-align: top;
+    padding: 5pt 8pt 5pt 0;
+    border-top: 1px solid var(--line-2);
+  }
+  table.skills tr:first-child td { border-top: none; }
+  table.skills td:first-child {
+    width: 100pt;
+    color: var(--ink);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  table.skills td:last-child { color: var(--ink-2); }
+
+  /* ── Project block ───────────────────────────────── */
+  .proj {
+    margin: 8pt 0 12pt 0;
+    page-break-inside: avoid;
+  }
+  .proj .title {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 2pt;
+  }
+  .proj .title .name {
+    font-size: 11.5pt; font-weight: 600;
+  }
+  .proj .title .link {
+    font-size: 9.5pt; color: var(--ink-3); font-family: var(--mono);
+  }
+  .proj .quote {
+    color: var(--ink-3);
+    font-size: 10pt;
+    border-left: 2px solid var(--line);
+    padding-left: 8pt;
+    margin: 4pt 0;
+  }
+
+  /* ── Foot note ────────────────────────────────────── */
+  .footnote {
+    font-size: 9pt; color: var(--ink-3);
+    margin-top: 14pt; border-top: 1px solid var(--line);
+    padding-top: 6pt;
+  }
+
+  /* ── Print rules ─────────────────────────────────── */
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body { background: white; }
+    .page {
+      margin: 0; width: 210mm; min-height: 297mm; box-shadow: none;
+    }
+    .no-print { display: none !important; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ── Floating print button ───────────────────────── */
+  .print-btn {
+    position: fixed; right: 24px; bottom: 24px;
+    background: #18181b; color: white; border: 0;
+    padding: 10px 18px; border-radius: 999px;
+    font-family: var(--sans); font-size: 14px;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  }
+  .print-btn:hover { background: #3f3f46; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">
+  打印 / 另存为 PDF
+</button>
+
+<article class="page">
+
+  <header class="h-top">
+    <div>
+      <h1>孙道涛 <span style="font-weight:400;color:var(--ink-3);font-size:13pt;">Daotao Sun</span></h1>
+      <div class="sub">Forward Deployed Engineer · 10 yrs · 杭州</div>
+    </div>
+    <div class="meta">
+      📞 13282001310<br/>
+      ✉️ 459269440@qq.com<br/>
+      🔗 <a href="https://github.com/Caspian-Sun">github.com/Caspian-Sun</a><br/>
+      🔗 <a href="https://www.linkedin.com/in/caspian-sun-404b6140b">LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="target">
+    <b>求职意向</b>
+    <span>Forward Deployed Engineer / AI 应用工程师 / 解决方案工程师 <i style="color:var(--ink-3);">(兼考虑 高级前端 / 前端架构师 / 全栈架构师)</i></span>
+    <span><b>期望</b> 35-60K · 杭州 / 远程 · 1 周到岗</span>
+  </div>
+
+  <div class="pitch">
+    10 年技术 + 团队管理经验, 近 1 年深入 AI 工程化, <b>独立设计并落地了一套 AI 研发工作流方法论</b> (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>), 已在前端 (React/UmiJS) / 桌面 (Tauri + Rust) / 移动 (Flutter Android/iOS/鸿蒙) 三个完全不同的形态上跑通生产级项目。擅长把通用 AI 能力封装成具体行业可用的工程方案 —— 这正是 FDE 岗位的核心能力。
+  </div>
+
+  <h2>核心能力</h2>
+
+  <table class="skills">
+    <tr><td>AI 工程化</td><td>自研 8 步法 SDLC 框架 + 硬性闸门 + <code>@rules</code> 追溯链 + 五件套协作机制 (commands / skills / subagents / hooks / rules); 熟悉 Claude / GPT / Gemini 的 prompt caching · tool use · agent workflow · MCP</td></tr>
+    <tr><td>跨栈全栈</td><td>TypeScript · Rust · Dart · Go · Python · Java · Node; 同一套方法论在 React / Tauri / Flutter 三栈通用</td></tr>
+    <tr><td>架构与低代码</td><td>8 年低代码 / 设计系统经验 (ServerUI / Formily 二开 / 有赞 UiDraft); 解决过 Vue+React+Angular 同页沙箱、动态组件加载、qiankun 兼容性等深水区问题</td></tr>
+    <tr><td>团队管理</td><td>带过 20+ 人前端团队 (品茗 / 览众), 主导前端规范、CI/CD、code review、绩效评估</td></tr>
+    <tr><td>复合背景</td><td>美术学本科 + 副修计算机; 设计直觉强, 做过 Figma uiobject 反解 + DSL 编写 + Chrome 插件 (UIdraft)</td></tr>
+    <tr><td>行业落地</td><td>金融 (浙商银行) · 建筑 (品茗 / 巡检) · 零售 SaaS (商品通 / 留夫鸭 / 李宁 / 太平鸟) · Web3 (Cpcash) · 设计工具 (有赞 UiDraft)</td></tr>
+  </table>
+
+  <h2>代表项目</h2>
+
+  <div class="proj">
+    <div class="title">
+      <span class="name">claude-code-workflow — AI 研发工作流方法论</span>
+      <span class="link">github.com/Caspian-Sun/claude-code-workflow</span>
+    </div>
+    <div class="quote">把 "需求 → 设计 → 代码 → 测试 → 上线" 全链路拆成可追溯的命令、技能、子代理和规则, 由 AI 执行, 人监督每个关键节点。</div>
+    <ul>
+      <li><b>8 步法 + 硬闸门</b>: <code>/prd → /plan → /code → /test → /review → /build → /deploy → /release</code>; <code>prd-check</code> 拦占位符, <code>plan-check</code> 拦不完整任务, AI 无法默默跳过</li>
+      <li><b><code>@rules</code> 追溯链</b>: PRD 锚点 → 任务 ID → 源码 <code>@prd/@rules</code> → 测试 <code>it()</code>, 任何一环改了可向下游全扫</li>
+      <li><b>五件套架构</b>: Commands (决策) + Skills (脚本) + Subagents (并行/独立视角) + Hooks (静默守护) + Rules (长期约束), 边界清晰</li>
+      <li><b>跨域可移植</b>: 框架本体一行没改, 已在 3 个不同栈跑通 (见 <code>docs/ADAPTING.md</code> 跨工种适配清单)</li>
+      <li>开源 + 中英双语 + 完整 GitHub 包装 (badges · LICENSE · contribution guide)</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="title">
+      <span class="name">Cpcash Wallet — Web3 钱包 (Flutter 三端)</span>
+      <span class="link">private repo · 可联系作者展示</span>
+    </div>
+    <div class="quote">加密钱包, 一份 Dart 代码同时分发 Android / iOS / <b>鸿蒙 OHOS</b>。</div>
+    <ul>
+      <li><b>规模</b>: 138 commits · 13 天交付 Phase 1 · dev + staging 已发版 · 二期进行中</li>
+      <li><b>执行精度</b>: 每个 commit 挂任务 ID, 5 大模块 <b>167 个任务 100% 完成可追溯</b> (account 32 · assets 23 · home 41 · transfer 28 · receive 43)</li>
+      <li><b>质量</b>: 4 个结构化 bug 报告全闭环修复, bug 密度 ≈ 2.4% (Web3 业务极低水平)</li>
+      <li><b>三端同步</b>: 鸿蒙特有的 <code>MissingPluginException</code> 在同一分支顺手解决, 没分裂出鸿蒙独立分支</li>
+      <li><b>业务深度</b>: BIP39 助记词 / BIP44 派生 / EVM 多链转账收款 / 私钥本地化 / 多钱包并存</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="title">
+      <span class="name">Spider — Tauri 桌面元工具</span>
+      <span class="link">github.com/Caspian-Sun/spider</span>
+    </div>
+    <div class="quote">用方法论 (项目 1) 造出来的、用来可视化方法论 (项目 1) 的桌面工具。一个 dogfooding + 自指的工程案例, 证明方法论自身可消费。</div>
+    <ul>
+      <li><b>技术栈</b>: Tauri 2 + Rust 后端 (PTY/scan/watcher/IPC) + React 前端 (15 个 feature 模块)</li>
+      <li><b>价值</b>: 把任意 <code>claude-code-workflow</code> 仓库可视化成 DAG 看板, 每条泳道一个 <code>/command</code>, 每张卡片承载真实 PTY 会话</li>
+      <li><b>跨栈证据</b>: 同一套 <code>@prd / @task / @rules</code> 追溯链在 TS + Rust 双栈通用, 仅需补 Rust 注释语法适配</li>
+    </ul>
+  </div>
+
+  <h2>工作经历</h2>
+
+  <div class="role-row"><span class="left">有赞 (杭州知擎信息科技) · 前端开发工程师</span><span class="right">2024.11 - 2025.04</span></div>
+  <ul>
+    <li>主导 <b>UiDraft</b> 底层设计系统编写与维护, 标准化 UI 组件提升跨平台体验一致性</li>
+    <li>参与 <b>UXtwo AI</b> 智能推荐 + 自动化界面生成, 落地 AI 优化设计师工作流</li>
+    <li>独立产出 <b>UIdraft Chrome 插件</b> (React + TS), 基于 DFS/DSF 实现多组件层级关系识别, 支持复杂场景组件交叉合并</li>
+  </ul>
+
+  <div class="role-row"><span class="left">浙商银行 财资项目 · 前端架构师 <span style="color:var(--ink-3);font-size:9.5pt;">(神州信息派驻)</span></span><span class="right">2023.10 - 2024.11</span></div>
+  <ul>
+    <li>制定前端开发规范, 团队 <b>PR review 周期 3 天 → 6 小时</b></li>
+    <li>攻克 qiankun 框架向下兼容 (proxy) 难题, 让微前端项目支持低版本浏览器场景</li>
+    <li>优化首屏加载: 按 main 运行模式排查调用树 + 资源树, <b>5000ms → 200ms (25x 提升)</b></li>
+    <li>主导脱兔低代码平台开发, 集成 S2 大数据表格; 用 React 编写功能嵌入 Vue 老项目, 实现新旧栈共存</li>
+    <li>搭建组件服务中心 (借鉴 ServerUI 思路), 用户可在线实时加载组件</li>
+  </ul>
+
+  <div class="role-row"><span class="left">杭州亦城亦村 (创业) · 技术经理</span><span class="right">2023.02 - 2023.08</span></div>
+  <ul>
+    <li>核心产品 <b>分巢</b>: 积分 App, 主/被动扫码支付, 微信小程序 + 安卓 + iOS 三端</li>
+    <li>前端 uniapp / RN / React / Canvas (后期 Flutter 重构, 自定义 Widget + 重排 Container) · 后端 Go(gin) + MySQL + MongoDB + Redis + Nginx</li>
+    <li>独立完成全栈开发 + 项目规划 + 地推</li>
+  </ul>
+
+  <div class="role-row"><span class="left">品茗科技 · 全栈工程师</span><span class="right">2021.10 - 2023.01</span></div>
+  <ul>
+    <li>带前端团队, 主导前端架构 + 低代码平台 + BI 大屏 + 微服务前端</li>
+    <li><b>元笔</b>: Formily 二开实现表单可视化拖拽, 非技术成员可独立创建表单</li>
+    <li><b>巡检</b>: 建筑行业日检 Web + 小程序 + H5 全端 (React/Antd/Umi + uniapp + Vue2/Vue3)</li>
+    <li>BI 大屏核心组件 · 优化 CDN 解决国内 + 香港地区资源加载 · 数字建造业务线小程序/H5/App</li>
+  </ul>
+
+  <div class="role-row"><span class="left">杭州览众数据 · 全栈工程师 → 前端 Leader</span><span class="right">2018.08 - 2021.10</span></div>
+  <ul>
+    <li><b>ServerUI (lowcode)</b> 自研声明式低代码平台 (2020.11 至今): MVVM 数据中心 + 模块加载器 <code>relation</code>; <b>Vue/React/Angular 同页运行</b>的沙箱隔离机制 (编译时+运行实例); 在线 Fx (借鉴 serverless) 反编译实例生命周期实现热扩展; <a href="https://blog.csdn.net/u014080304/article/details/114393458">CSDN 设计思考</a></li>
+    <li><b>商品通 SaaS</b> (服装零售供应链): qiankun + Vue2/Vue3/TS 新旧系统兼容; node 微服务前端中心</li>
+    <li><b>dataflow</b>: d3.js + dag.js 数仓脚本依赖可视化, 数百节点快速渲染</li>
+    <li><b>小览工具集</b>: ci/cd 脚手架 + 内部源 install/uninstall (难点: 卸载需对比新旧配置快照还原)</li>
+    <li><b>零售业务线</b>: 留夫鸭 / 李宁 / 太平鸟 / 一鸣 / 生鲜 / Bee 招聘等多个项目, 含大数据 canvas table + echart 二次封装</li>
+  </ul>
+
+  <div class="role-row"><span class="left">软通动力 · 前端开发工程师</span><span class="right">2015.07 - 2018.07</span></div>
+  <ul>
+    <li>驻场支付宝相关系统前端开发, 页面设计 + 交互实现 + 性能优化</li>
+  </ul>
+
+  <h2>教育</h2>
+  <div class="role-row">
+    <span class="left">上饶师范学院 · 本科 · 美术学 (主修) + 计算机 (副修)</span>
+    <span class="right">2011 - 2015</span>
+  </div>
+  <p style="font-size:10pt;color:var(--ink-3);margin-top:2pt;">美术 → 设计敏感 → 设计系统工程化 → AI + 设计工具 (UIdraft / Figma uiobject DSL), 这是我做 AI 应用工程时的差异化优势。</p>
+
+  <h2>技术输出</h2>
+  <ul>
+    <li>ServerUI 低代码设计思考 — <a href="https://blog.csdn.net/u014080304/article/details/114393458">CSDN 长文</a></li>
+    <li>claude-code-workflow 方法论文档体系 (英文 + 中文双语) — 见 GitHub 仓库</li>
+    <li><i>规划中: "AI 工作流落地的 3 个反直觉设计" 博客系列</i></li>
+  </ul>
+
+  <div class="footnote">
+    本简历用 HTML 模板生成 · 浏览器打印另存为 PDF · 修改源文件 <code>resume-senior-zh.html</code> 即可更新
+  </div>
+
+</article>
+
+</body>
+</html>
