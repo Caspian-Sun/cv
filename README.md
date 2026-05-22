@@ -2,7 +2,6 @@
 
 > **Forward Deployed Engineer** · 10 yrs · Hangzhou, China · Open to remote
 
-📞 +86 132 8200 1310 · ✉️ 459269440@qq.com · 💬 WeChat 13282001310
 🔗 [GitHub](https://github.com/Caspian-Sun) · [LinkedIn](https://www.linkedin.com/in/caspian-sun-404b6140b)
 
 ---
