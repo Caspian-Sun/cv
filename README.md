@@ -53,8 +53,6 @@ Open to remote · based in Hangzhou, China · willing to relocate · 1-week noti
 
 The fastest way to reach me:
 
-- 📧 **459269440@qq.com** (English / Chinese both fine)
-- 💬 WeChat: **13282001310**
 - 🔗 [LinkedIn](https://www.linkedin.com/in/caspian-sun-404b6140b)
 
 I respond within 24h.
