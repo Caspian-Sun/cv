@@ -43,11 +43,9 @@
 "AI 没约束、AI 没记忆"两个老问题。
 
 ▍验证层
-这套方法论我在三个完全不同的栈和场景里都跑过:
+这套方法论我在不同的栈和场景里都跑过:
 - React / UmiJS 前端管理后台 (本仓库参考实现)
 - Tauri + Rust 桌面开发者工具 (Spider, 公开仓库)
-- Flutter Web3 钱包, Android+iOS+鸿蒙三端 (Cpcash, 138 commits,
-  167 任务 100% 完成度可追溯, 13 天交付)
 
 ▍工程底子
 10 年全栈 + 带过 20 人以上前端团队, 服务过金融 (浙商银行)、
@@ -63,7 +61,7 @@
 
 我对 [公司名] 这种类型的岗位酝酿很久了。过去一年我有意识地把自己
 从 "前端工程师" 转向 "AI 应用工程师 (FDE)" 这条路: 先做方法论, 再做
-跨栈实证, 然后做行业 case (Web3 钱包)。我相信现在是入场最好的时机。
+跨栈实证。我相信现在是入场最好的时机。
 
 我可以在 1 周内到岗, 期望薪资 35-60K (可议)。
 
@@ -123,17 +121,14 @@ hard gates and a traceability chain, built to solve two systemic problems
 with AI in engineering: "AI has no constraints" and "AI has no memory."
 
 ▍ Cross-stack validation
-I applied the same framework, unchanged, across three completely different
-stacks:
+I applied the same framework, unchanged, across different stacks:
 - React / UmiJS web admin (reference implementation)
 - Tauri + Rust desktop dev tool (Spider — public repo)
-- Flutter Web3 wallet on Android + iOS + HarmonyOS (Cpcash — 138 commits,
-  167 tasks closed at 100%, shipped to dev + staging in 13 days)
 
 ▍ Engineering foundation
 10 years of full-stack work + frontend teams of 20+ engineers. Verticals
-include finance (Zheshang Bank treasury), construction (Pinming), retail
-SaaS (Shangpintong), and Web3 (Cpcash).
+include finance (Zheshang Bank treasury), construction (Pinming), and
+retail SaaS (Shangpintong).
 
 ▍ Cross-discipline
 BA in Fine Arts + CS minor. I built Figma uiobject reverse-engineering
@@ -145,17 +140,17 @@ crosses into design tooling.
 【Why now】
 
 I've been working toward this kind of role deliberately for the past year:
-first the methodology, then cross-stack validation, then a production
-vertical case (the Web3 wallet). I believe this is the right moment to
-move into FDE work at scale, and [Company] is at the top of my list.
+first the methodology, then cross-stack validation. I believe this is the
+right moment to move into FDE work at scale, and [Company] is at the top
+of my list.
 
 I'm based in Hangzhou, China; open to remote-first roles or relocation.
 
-Resumes attached in EN + ZH. The three flagship repos are linked on
-page one of the EN resume.
+Resumes attached in EN + ZH. The flagship repos are linked on page one
+of the EN resume.
 
-I'd love a 30-minute call to walk through the methodology and the Cpcash
-wallet's commit history live — happy to demo whenever works for you.
+I'd love a 30-minute call to walk through the methodology live — happy
+to demo whenever works for you.
 
 Best,
 Tom Sun (Daotao Sun)

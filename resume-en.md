@@ -9,7 +9,7 @@
 
 ## Summary
 
-10-year full-stack engineer and team lead who spent the last year building an **AI-driven R&D methodology** ([`claude-code-workflow`](https://github.com/Caspian-Sun/claude-code-workflow)) and applying it across three completely different stacks — React/UmiJS (web), Tauri + Rust (desktop), and Flutter (Android + iOS + HarmonyOS).
+10-year full-stack engineer and team lead who spent the last year building an **AI-driven R&D methodology** ([`claude-code-workflow`](https://github.com/Caspian-Sun/claude-code-workflow)) and applying it across different stacks — React/UmiJS (web) and Tauri + Rust (desktop).
 
 I specialize in turning generic AI capabilities (Claude, GPT, Gemini) into production-grade engineering workflows for specific verticals — exactly what a Forward Deployed Engineer does.
 
@@ -20,8 +20,7 @@ I specialize in turning generic AI capabilities (Claude, GPT, Gemini) into produ
 ## Highlights
 
 - **AI methodology**: Designed and shipped an 8-step SDLC framework with hard gates, traceability chain, and five-part collaboration architecture (commands / skills / subagents / hooks / rules). Open-sourced, bilingual (EN/ZH).
-- **Cross-stack proven**: The same methodology survives unchanged across TypeScript-only (UmiJS), Rust + TS (Tauri), and Dart (Flutter) — three different stacks, three different platforms (Web / Desktop / Mobile), three different domains (admin / dev tools / Web3 wallet).
-- **Production track record**: Cpcash Web3 wallet shipped **138 commits, 167 tasks closed at 100%, in 13 days**, on three mobile OSes (Android / iOS / HarmonyOS).
+- **Cross-stack proven**: The same methodology survives unchanged across TypeScript-only (UmiJS) and Rust + TS (Tauri) — different stacks, different platforms (Web / Desktop), different domains (admin / dev tools).
 - **Frontend depth**: 8 years of low-code platform + design system experience, including a self-built low-code platform (ServerUI) and a refactor of Formily for visual form design at scale.
 - **People leadership**: Led frontend teams of 20+ engineers (Pinming, Lanzhong), owned hiring, code review, perf reviews, technical roadmap.
 - **Cross-discipline background**: BA in Fine Arts + minor in CS — strong design intuition, useful for AI-assisted design tooling work.
@@ -39,21 +38,10 @@ I specialize in turning generic AI capabilities (Claude, GPT, Gemini) into produ
 - **8-step SDLC pipeline** (`/prd → /plan → /code → /test → /review → /build → /deploy → /release`) with hard gates (`prd-check`, `plan-check`) that AI cannot silently skip
 - **Traceability chain**: PRD anchor → task ID → source `@prd/@rules` → test `it()`. Change any link, scan downstream automatically.
 - **Five-part architecture**: Commands (decisions) + Skills (scripts) + Subagents (parallel/isolated context) + Hooks (silent guards) + Rules (long-term constraints)
-- **Cross-domain portable**: Same framework powers three different projects (frontend / desktop / mobile) without a single line of core code rewrite
+- **Cross-domain portable**: Same framework powers different projects (frontend / desktop) without a single line of core code rewrite
 - Open-source · MIT license · bilingual docs · full GitHub packaging
 
 🔗 https://github.com/Caspian-Sun/claude-code-workflow
-
-### Cpcash Wallet — Web3 Mobile Wallet (Flutter, 3 OSes)
-
-> Crypto wallet shipping from a single Dart codebase to Android, iOS, and HarmonyOS. *(Private repo, walkthrough available on request.)*
-
-- **138 commits in 13 days**, every commit tagged with a task ID (`T001-T043 — 43/43 = 100%`)
-- **167 tasks closed at 100%** across 5 modules (account / assets / home / transfer / receive)
-- **4 structured bug reports**, all closed-loop. Bug density ≈ 2.4% — low for Web3.
-- **HarmonyOS-specific `MissingPluginException` resolved in-line** without forking a platform branch
-- Business depth: BIP39 mnemonics, BIP44 derivation, EVM multi-chain transfer/receive, local key custody, multi-wallet
-- Full methodology adherence report records all execution details + honest gaps
 
 ### Spider — Tauri Desktop Meta-Tool
 

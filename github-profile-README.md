@@ -32,10 +32,9 @@
 ```
 1. claude-code-workflow   ← 方法论 (最核心)
 2. spider                  ← 元工具 (跨栈证据)
-3. [Cpcash 公开镜像 / 或保留私有不 pin]
-4. [ServerUI 如果有公开仓库]
-5. [其他能体现 AI 工程化的小项目]
-6. [一个体现你写作 / 思考能力的仓库]
+3. [ServerUI 如果有公开仓库]
+4. [其他能体现 AI 工程化的小项目]
+5. [一个体现你写作 / 思考能力的仓库]
 ```
 
 如果不到 6 个就 pin 3 个最强的, 别凑数。
@@ -68,17 +67,12 @@ collaboration architecture. Open source, bilingual (EN/ZH).
 a kanban. A meta-tool: built with the methodology to render the methodology.
 Rust + React.
 
-**Cpcash Wallet** *(private repo, walkthrough on request)*
-— A Web3 mobile wallet shipping from a single Flutter codebase to Android,
-iOS, and HarmonyOS. 138 commits, 167 tasks closed at 100%, 13 days from
-init to dev/staging release.
-
 ---
 
 ### 🧰 Stack range
 
-`TypeScript` · `Rust` · `Dart` · `Go` · `Python` · `Java` · `Node`
-React · UmiJS · Tauri · Flutter · Vue · Solidity · Ant Design
+`TypeScript` · `Rust` · `Go` · `Python` · `Java` · `Node`
+React · UmiJS · Tauri · Vue · Ant Design
 
 ---
 
@@ -101,7 +95,7 @@ Before AI, I:
 - Built a self-hosted low-code platform (ServerUI) running Vue + React +
   Angular on the same page with sandbox isolation
 - Shipped products across finance (Zheshang Bank), construction (Pinming),
-  retail SaaS (Shangpintong / Li-Ning / Peacebird), and Web3 (Cpcash)
+  and retail SaaS (Shangpintong / Li-Ning / Peacebird)
 - Studied Fine Arts (undergrad) before CS — strong design intuition
 
 ---

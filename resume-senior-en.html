@@ -211,18 +211,18 @@
   </div>
 
   <div class="pitch">
-    10-year full-stack engineer and team lead. Spent the past year designing and shipping an open-source AI R&D methodology (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>) and applying it, unchanged, across three completely different stacks — <b>React/UmiJS (web), Tauri + Rust (desktop), and Flutter (Android + iOS + HarmonyOS)</b>. I turn generic AI capabilities into production engineering workflows for specific verticals — exactly what an FDE does.
+    10-year full-stack engineer and team lead. Spent the past year designing and shipping an open-source AI R&D methodology (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>) and applying it, unchanged, across different stacks — <b>React/UmiJS (web) and Tauri + Rust (desktop)</b>. I turn generic AI capabilities into production engineering workflows for specific verticals — exactly what an FDE does.
   </div>
 
   <h2>Highlights</h2>
 
   <table class="skills">
     <tr><td>AI Engineering</td><td>Self-built 8-step SDLC framework with hard gates and <code>@rules</code> traceability chain; deep familiarity with Claude / GPT / Gemini including prompt caching, tool use, agent workflow, MCP</td></tr>
-    <tr><td>Stack range</td><td>TypeScript · Rust · Dart · Go · Python · Java · Node; same methodology powers React / Tauri / Flutter without core rewrite</td></tr>
+    <tr><td>Stack range</td><td>TypeScript · Rust · Go · Python · Java · Node; same methodology powers React / Tauri without core rewrite</td></tr>
     <tr><td>Low-code / Architecture</td><td>8 years on low-code platforms and design systems (ServerUI, Formily fork, Youzan UiDraft); solved Vue+React+Angular same-page sandbox, dynamic component loading, qiankun compatibility</td></tr>
     <tr><td>People leadership</td><td>Led frontend teams of 20+ engineers (Pinming, Lanzhong); owned hiring, code review, perf evaluations, tech roadmap</td></tr>
     <tr><td>Cross-discipline</td><td>BA in Fine Arts + minor in CS; strong design intuition for AI-assisted tooling (UIdraft Chrome extension, Figma uiobject DSL)</td></tr>
-    <tr><td>Verticals shipped</td><td>Finance (Zheshang Bank treasury) · Construction (Pinming) · Retail SaaS (Shangpintong, Li-Ning, Peacebird) · Web3 (Cpcash) · Design tooling (Youzan UiDraft)</td></tr>
+    <tr><td>Verticals shipped</td><td>Finance (Zheshang Bank treasury) · Construction (Pinming) · Retail SaaS (Shangpintong, Li-Ning, Peacebird) · Design tooling (Youzan UiDraft)</td></tr>
   </table>
 
   <h2>Featured Projects</h2>
@@ -238,23 +238,8 @@
       <li><b>8-step SDLC pipeline</b> (<code>/prd → /plan → /code → /test → /review → /build → /deploy → /release</code>) with hard gates (<code>prd-check</code>, <code>plan-check</code>) that AI cannot silently skip</li>
       <li><b>Traceability chain</b>: PRD anchor → task ID → source <code>@prd/@rules</code> → test <code>it()</code>. Change any link, scan downstream automatically.</li>
       <li><b>Five-part architecture</b>: Commands (decisions) + Skills (scripts) + Subagents (parallel/isolated context) + Hooks (silent guards) + Rules (long-term constraints)</li>
-      <li><b>Cross-domain portable</b>: Same framework powers three different projects (frontend/desktop/mobile) without a single line of core rewrite</li>
+      <li><b>Cross-domain portable</b>: Same framework powers different projects (frontend/desktop) without a single line of core rewrite</li>
       <li>Open source · MIT license · bilingual EN/ZH docs · full GitHub packaging</li>
-    </ul>
-  </div>
-
-  <div class="proj">
-    <div class="title">
-      <span class="name">Cpcash Wallet — Web3 Mobile Wallet (Flutter, 3 OSes)</span>
-      <span class="link">private repo · walkthrough on request</span>
-    </div>
-    <div class="quote">Crypto wallet shipping from a single Dart codebase to Android, iOS, and HarmonyOS.</div>
-    <ul>
-      <li><b>Scale</b>: 138 commits in 13 days, every commit tagged with a task ID (<code>T001-T043 — 43/43 = 100%</code>)</li>
-      <li><b>Execution fidelity</b>: 167 tasks closed at 100% across 5 modules (account / assets / home / transfer / receive)</li>
-      <li><b>Quality</b>: 4 structured bug reports, all closed-loop. Bug density ≈ 2.4% — low for Web3.</li>
-      <li><b>Cross-platform</b>: HarmonyOS-specific <code>MissingPluginException</code> resolved in-line without forking a platform branch</li>
-      <li><b>Domain depth</b>: BIP39 mnemonics, BIP44 derivation, EVM multi-chain transfer/receive, local key custody, multi-wallet</li>
     </ul>
   </div>
 

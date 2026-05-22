@@ -32,7 +32,6 @@ Open to remote · based in Hangzhou, China · willing to relocate · 1-week noti
 
 - **[claude-code-workflow](https://github.com/Caspian-Sun/claude-code-workflow)** — AI R&D methodology framework. 8-step SDLC with hard gates, `@rules` traceability chain, five-part collaboration architecture. Open source, bilingual.
 - **[spider](https://github.com/Caspian-Sun/spider)** — Tauri 2 + Rust desktop tool that visualizes any claude-code-workflow repo as a kanban. A meta-tool: built with the methodology to render the methodology.
-- **Cpcash Wallet** *(private)* — Flutter Web3 wallet on Android + iOS + HarmonyOS. **138 commits / 167 tasks closed at 100% / 13 days from init to dev+staging release.** Walkthrough available on request.
 
 ---
 

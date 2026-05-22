@@ -16,10 +16,8 @@ framework with hard gates, traceability chain, and a five-part collaboration
 architecture (commands / skills / subagents / hooks / rules).
 
 What makes the methodology interesting is that I didn't just publish docs.
-I applied it across three completely different stacks and three different
-domains without rewriting the core: a UmiJS/React admin frontend, a Tauri + Rust
-desktop dev tool (Spider), and a Flutter Web3 wallet shipping to Android, iOS,
-and HarmonyOS (Cpcash — 138 commits and 167 tasks closed at 100% in 13 days).
+I applied it across different stacks and domains without rewriting the core:
+a UmiJS/React admin frontend and a Tauri + Rust desktop dev tool (Spider).
 
 Before AI, I led frontend teams of 20+ engineers, built a self-hosted low-code
 platform (ServerUI) that runs Vue, React, and Angular on the same page with
@@ -44,10 +42,8 @@ for their specific verticals. Open to remote.
 开源在 GitHub 上叫 claude-code-workflow, 把"需求到上线"全链路
 拆成 8 步, 每步都能让 AI 自动跑, 但关键节点必须人审。
 
-更重要的是, 这套方法论我已经亲自用三个完全不同的栈验证过:
-React 前端、Tauri Rust 桌面、Flutter 三端移动. 其中那个 Flutter
-的 Web3 钱包项目, 13 天 138 个 commit, 167 个任务 100% 完成,
-同时跑安卓、iOS、鸿蒙三端。
+更重要的是, 这套方法论我已经亲自用不同的栈验证过:
+React 前端和 Tauri Rust 桌面 (Spider), 框架本体一行没改。
 
 我想转 FDE — 因为这种"把通用 AI 落地到具体行业"的事,
 我已经在自己身上证明过了, 现在想去帮客户做同样的事。
@@ -73,13 +69,8 @@ React 前端、Tauri Rust 桌面、Flutter 三端移动. 其中那个 Flutter
 核心是 8 步 SDLC + 硬性闸门 + @rules 追溯链, 解决了 AI 没约束、
 AI 没记忆这两个老问题。
 
-第二, 我把这套方法论亲手在三个完全不同的栈上验证过: React 前端、
-Tauri + Rust 桌面、Flutter Android/iOS/鸿蒙三端移动, 框架本体
-一行没改。
-
-第三, 用 Flutter 的那个 Web3 钱包项目 (Cpcash) 已经做到生产级 ——
-13 天 138 commits, 167 个任务 100% 完成度可追溯, 4 个 bug 全
-闭环修复, dev/staging 都已发版。
+第二, 我把这套方法论亲手在不同的栈上验证过: React 前端和
+Tauri + Rust 桌面, 框架本体一行没改, 证明它跨域可移植。
 
 往前看, 我之前 8 年是做低代码 + 设计系统 + 多端架构的, 带过
 20+ 人前端团队, 服务过金融 (浙商银行)、建筑 (品茗)、零售 SaaS
@@ -105,10 +96,9 @@ Tauri + Rust 桌面、Flutter Android/iOS/鸿蒙三端移动, 框架本体
 高度匹配, 特来投递。
 
 我最近一年的核心工作是设计并开源了一套 AI 研发工作流框架
-(claude-code-workflow), 并在三个完全不同的栈 (React/Tauri/Flutter)
-和三个不同领域 (前端/桌面/Web3 钱包) 落地验证了它的可移植性 ——
-我相信这正是 FDE / 应用工程师岗位最需要的能力: 把通用 AI 能力
-封装成具体行业可用的工程方案。
+(claude-code-workflow), 并在不同的栈 (React/Tauri) 和不同领域
+(前端/桌面) 落地验证了它的可移植性 —— 我相信这正是 FDE / 应用
+工程师岗位最需要的能力: 把通用 AI 能力封装成具体行业可用的工程方案。
 
 附件是我的简历 (中文 / 英文双版本), 三个代表项目的 GitHub 链接
 都在简历首页, 期待您的回复。
@@ -134,11 +124,8 @@ wanted to reach out directly.
 The short version: I spent the last year designing and shipping an
 open-source AI R&D methodology (claude-code-workflow) — an 8-step SDLC
 framework with hard gates and traceability chain. The interesting part
-is that I've already applied it across three completely different stacks
-(React / Rust+Tauri / Flutter) and three different domains, without
-rewriting the core. The most production-grade case is a Flutter Web3
-wallet that shipped 138 commits and 167 tasks closed at 100% in 13 days,
-on Android + iOS + HarmonyOS.
+is that I've already applied it across different stacks (React /
+Rust+Tauri) and different domains, without rewriting the core.
 
 This is essentially the FDE job — taking generic AI capabilities and
 deploying them into specific verticals. I'd love to do this at [Company]
@@ -148,7 +135,6 @@ because [一句话说明你为什么对这家公司有兴趣 — 看到 X 产品
 Happy to share the GitHub repos + a walkthrough on a call:
 - Methodology: https://github.com/Caspian-Sun/claude-code-workflow
 - Spider (Rust/Tauri): https://github.com/Caspian-Sun/spider
-- Cpcash report: available on request
 
 Open to remote / willing to relocate.
 
@@ -170,5 +156,5 @@ Tom
 
 **通用原则**:
 1. 永远先讲 **claude-code-workflow + 跨栈验证** 这个一句话故事
-2. 数字优先于形容词 ("138 commits / 13 天 / 167 任务 100%" > "高效完成")
+2. 数字优先于形容词 ("5000ms → 200ms / 25x 提升" > "高效完成")
 3. 别讲历史包袱 (10 年里前 8 年的事), 只讲它们如何支撑现在的 FDE 定位

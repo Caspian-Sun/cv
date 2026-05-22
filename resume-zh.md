@@ -14,7 +14,7 @@
 
 ## 一句话定位
 
-10 年技术 + 团队管理经验, 近 1 年深入 AI 工程化, **独立设计并落地了一套 AI 研发工作流方法论** ([claude-code-workflow](https://github.com/Caspian-Sun/claude-code-workflow)), 已在前端 (React/UmiJS) / 桌面 (Tauri + Rust) / 移动 (Flutter Android/iOS/鸿蒙) 三个完全不同的形态上跑通生产级项目。
+10 年技术 + 团队管理经验, 近 1 年深入 AI 工程化, **独立设计并落地了一套 AI 研发工作流方法论** ([claude-code-workflow](https://github.com/Caspian-Sun/claude-code-workflow)), 已在前端 (React/UmiJS) 与桌面 (Tauri + Rust) 两个完全不同的形态上跑通生产级项目。
 
 擅长把通用 AI 能力封装成具体行业可用的工程方案 —— 这正是 FDE 岗位的核心能力。
 
@@ -25,11 +25,11 @@
 | 维度 | 具体内容 |
 |------|---------|
 | **AI 工程化** | 自研 8 步法 SDLC 框架, 含硬性闸门 + `@rules` 追溯链 + 5 件套协作机制 (commands / skills / subagents / hooks / rules); 熟悉 Claude / GPT / Gemini 的 prompt caching · tool use · agent workflow · MCP |
-| **跨栈全栈** | TypeScript · Rust · Dart · Go · Python · Java · Node; 同一套方法论在 React / Tauri / Flutter 三栈通用 |
+| **跨栈全栈** | TypeScript · Rust · Go · Python · Java · Node; 同一套方法论在 React / Tauri 双栈通用 |
 | **架构与低代码** | 8 年低代码 / 设计系统经验 (ServerUI / Formily 二开 / 有赞 UiDraft); 解决过 Vue+React+Angular 同页沙箱、动态组件加载、qiankun 兼容性等深水区问题 |
 | **团队管理** | 带过 20+ 人前端团队 (品茗 / 览众), 主导前端规范、CI/CD、code review、绩效评估 |
 | **复合背景** | 美术学本科 + 副修计算机; 设计直觉强, 做过 Figma uiobject 反解 + DSL 编写 + Chrome 插件 (UIdraft) |
-| **行业落地** | 金融 (浙商银行财资) · 建筑 (品茗 / 巡检) · 零售 SaaS (商品通 / 留夫鸭 / 李宁 / 太平鸟) · Web3 (Cpcash) · 设计工具 (有赞 UiDraft / UIdraft) |
+| **行业落地** | 金融 (浙商银行财资) · 建筑 (品茗 / 巡检) · 零售 SaaS (商品通 / 留夫鸭 / 李宁 / 太平鸟) · 设计工具 (有赞 UiDraft / UIdraft) |
 
 ---
 
@@ -44,23 +44,12 @@
 - **8 步法 + 硬闸门** — `/prd → /plan → /code → /test → /review → /build → /deploy → /release`, 配合 `prd-check` / `plan-check` 硬阻断, AI 不能默默跳过
 - **`@rules` 追溯链** — PRD 锚点 → 任务 ID → 源码 `@prd/@rules` → 测试 `it()`, 任何一环改动可向下游全扫
 - **五件套架构** — Commands (决策) + Skills (脚本) + Subagents (并行/独立视角) + Hooks (静默守护) + Rules (长期约束), 边界清晰
-- **跨域可移植** — 框架本体一行没改, 已在 3 个完全不同的栈上跑通 (见 `docs/ADAPTING.md` 跨工种适配清单)
+- **跨域可移植** — 框架本体一行没改, 已在多个完全不同的栈上跑通 (见 `docs/ADAPTING.md` 跨工种适配清单)
 - 开源 + 中英双语 + 完整 GitHub 包装 (badges / LICENSE / contribution guide)
 
 🔗 https://github.com/Caspian-Sun/claude-code-workflow
 
-### 2. Cpcash Wallet — Web3 钱包 (Flutter 三端)
-
-> 加密钱包, 一份 Dart 代码同时分发 Android / iOS / **鸿蒙 OHOS**。**(私有仓库, 可联系作者展示)**
-
-- **规模**: **138 commits / 13 天** 完成 Phase 1, 已发 dev + staging 版本, 正在做二期
-- **执行精度**: 每个 commit 挂任务 ID, 5 大模块 **167 个任务 100% 完成可追溯** (account 32 · assets 23 · home 41 · transfer 28 · receive 43)
-- **质量**: 4 个结构化 bug 报告全闭环修复 (bug 密度 ≈ 2.4%, 对 Web3 业务算极低)
-- **三端同步**: 鸿蒙特有的 `MissingPluginException` 在同一分支顺手解决, 没分裂出鸿蒙独立分支
-- **业务深度**: BIP39 助记词 / BIP44 派生 / EVM 多链转账收款 / 私钥本地化 / 多钱包并存
-- **方法论验证**: 完整复盘报告记录了 138 commits 的所有方法论执行细节 + 没解决的问题
-
-### 3. Spider — Tauri 桌面元工具
+### 2. Spider — Tauri 桌面元工具
 
 > 用方法论 (项目 1) 造出来的、用来可视化方法论 (项目 1) 的桌面工具。一个 dogfooding + 自指的工程案例, 证明方法论自身可消费。
 
