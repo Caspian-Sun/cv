@@ -294,6 +294,20 @@
     </ul>
   </div>
 
+  <div class="proj">
+    <div class="title">
+      <span class="name">claude-idle-alert — Claude Code 离座提醒插件 (已提交官方社区市场)</span>
+      <span class="link">github.com/Caspian-Sun/claude-idle-alert</span>
+    </div>
+    <div class="quote">dead-man's switch 插件:Claude 要你拍板 (问问题 / 计划待审批 / 权限弹窗) 立刻飞书, 停下没人回则分级升级 —— 文本 → @你 → 真打电话念给你听。装一次任意项目生效, 不改任何 settings.json。</div>
+    <ul>
+      <li><b>深度吃透 Claude Code 平台</b>: 用满 hooks 全生命周期 (PreToolUse / PostToolUse / Notification / Stop / UserPromptSubmit / SessionStart) + Skill 配置向导 + 插件/市场清单打包, 装即自动接线, 零侵入项目 settings.json</li>
+      <li><b>分级 dead-man's switch</b>: per-session nonce 布防, 重新布防靠 nonce 比对天然失效旧 watcher (不杀进程); 只在「真要你拍板」的信号上布防, 普通答完不误报</li>
+      <li><b>真实外部集成</b>: 飞书 webhook + 自建应用 OpenAPI (<code>tenant_access_token</code> → 发消息 → <code>urgent_phone</code> 电话加急), tier-3 真能打电话</li>
+      <li><b>隐私优先</b>: 通知只含「项目名 + 时长 + 档位」, 绝不外发对话内容; 凭据只存本地不入库 · 开源 · MIT · 中英双分支</li>
+    </ul>
+  </div>
+
   <h2>工作经历</h2>
 
   <div class="role-row"><span class="left">趣链科技股份有限公司 · Web3 前端工程师 <span style="color:var(--ink-3);font-size:9.5pt;">(主力开发)</span></span><span class="right">2025.09 - 至今</span></div>

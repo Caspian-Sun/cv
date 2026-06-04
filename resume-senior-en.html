@@ -273,6 +273,20 @@
     </ul>
   </div>
 
+  <div class="proj">
+    <div class="title">
+      <span class="name">claude-idle-alert — Claude Code idle-alert plugin (submitted to the official marketplace)</span>
+      <span class="link">github.com/Caspian-Sun/claude-idle-alert</span>
+    </div>
+    <div class="quote">A dead-man's-switch plugin: when Claude needs your decision (question / plan approval / permission prompt) it pings Feishu instantly; if it stops and nobody replies it escalates — text → @mention → an actual phone call. Install once, works in every project, zero settings.json changes.</div>
+    <ul>
+      <li><b>Deep Claude Code platform mastery</b>: full hooks lifecycle (PreToolUse / PostToolUse / Notification / Stop / UserPromptSubmit / SessionStart) + a Skill setup wizard + plugin/marketplace packaging — auto-wired on install, zero intrusion into project settings.json</li>
+      <li><b>Tiered dead-man's switch</b>: per-session nonce arming; re-arming invalidates stale watchers via nonce comparison (no process killing); arms only on genuine "needs you" signals, so normal completions never false-alarm</li>
+      <li><b>Real external integration</b>: Feishu webhook + custom-app OpenAPI (<code>tenant_access_token</code> → send message → <code>urgent_phone</code>) — tier-3 places a real phone call</li>
+      <li><b>Privacy-first</b>: notifications carry only "project + duration + tier", never conversation content; secrets stay local · open-source · MIT · bilingual dual-branch</li>
+    </ul>
+  </div>
+
   <h2>Experience</h2>
 
   <div class="role-row"><span class="left">Qulian Technology (Hyperchain) · Web3 Frontend Engineer <span style="color:var(--ink-3);font-size:9.5pt;">(core dev)</span></span><span class="right">Sep 2025 - Present</span></div>

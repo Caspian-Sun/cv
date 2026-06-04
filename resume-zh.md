@@ -72,6 +72,20 @@
 - **反哺框架**: 这个项目的真实交付压力, 直接催生了框架最新一轮加固 —— 发版硬门禁、自动化测试边界分诊、依赖图并行执行。**「做真实项目 → 提炼成工程能力」正是 FDE 的核心动作。**
 - 商业项目, 暂无公开仓库 (实现细节可面谈)
 
+### 4. claude-idle-alert — Claude Code 离座提醒插件 (已提交官方社区市场)
+
+> 一个 dead-man's switch 插件:Claude 需要你拍板 (问问题 / 计划待审批 / 权限弹窗) 立刻飞书提醒, 停下没人回则分级升级 —— 文本 → @你 → 真打电话念给你听。装一次任意项目生效, 不改任何 settings.json。
+
+**为什么这是 FDE 案例**: 直接在 Claude Code (Anthropic 自家平台) 上发布一个可安装的真实产品 —— 深度集成 + 平台理解, FDE 最看重的信号。
+
+- **深度吃透 Claude Code 平台**: 用满 hooks 全生命周期 (PreToolUse / PostToolUse / Notification / Stop / UserPromptSubmit / SessionStart) + Skill 配置向导 + 插件/市场清单打包, 装插件即自动接线, 零侵入项目 settings.json
+- **分级 dead-man's switch**: per-session nonce 布防, 重新布防靠 nonce 比对天然失效旧 watcher (不杀进程); 只在「真要你拍板」的信号上布防, 普通答完不误报
+- **真实外部集成**: 飞书自定义机器人 webhook + 自建应用 OpenAPI (tenant_access_token → 发消息拿 message_id → urgent_phone 电话加急), tier-3 真能打电话叫人
+- **隐私优先**: 通知只含「项目名 + 空闲时长 + 档位」, 绝不读取/外发对话内容; webhook/密钥只存本地、不入库
+- 开源 · MIT · 中英双分支 · 已提交 Anthropic 官方社区市场审核
+
+🔗 https://github.com/Caspian-Sun/claude-idle-alert
+
 ---
 
 ## 工作经历

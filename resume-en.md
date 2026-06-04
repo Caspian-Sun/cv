@@ -69,6 +69,20 @@ A dogfooding + self-referential engineering case. Proves the framework is self-c
 - **Fed back into the framework**: this project's real delivery pressure drove the latest round of hardening — shift-left release gates, automation-boundary triage, and dependency-graph parallel execution. **"Ship a real project → distill it into reusable engineering" is the core FDE move.**
 - Commercial project, no public repo (implementation details on request)
 
+### 4. claude-idle-alert — Claude Code idle-alert plugin (submitted to the official community marketplace)
+
+> A dead-man's-switch plugin: when Claude needs your decision (a question / plan approval / permission prompt) it pings Feishu instantly; if it stops and nobody replies it escalates — text → @mention → an actual phone call that reads the message aloud. Install once, works in every project, zero settings.json changes.
+
+**Why this is FDE work**: shipping a real, installable product on Claude Code (Anthropic's own platform) — deep integration + platform fluency, exactly the signal an FDE role looks for.
+
+- **Deep Claude Code platform mastery**: exercises the full hooks lifecycle (PreToolUse / PostToolUse / Notification / Stop / UserPromptSubmit / SessionStart) + a Skill setup wizard + plugin/marketplace manifest packaging — auto-wired on install, zero intrusion into project settings.json
+- **Tiered dead-man's switch**: per-session nonce arming; re-arming naturally invalidates stale watchers via nonce comparison (no process killing); arms only on genuine "needs you" signals, so normal turn completions never false-alarm
+- **Real external integration**: Feishu custom-bot webhook + custom-app OpenAPI (tenant_access_token → send message → urgent_phone) — tier-3 places a real phone call
+- **Privacy-first**: notifications carry only "project name + idle duration + tier" — never reads or transmits conversation content; webhook/secrets stay local, never committed
+- Open-source · MIT · bilingual dual-branch · submitted to Anthropic's official community marketplace
+
+🔗 https://github.com/Caspian-Sun/claude-idle-alert
+
 ---
 
 ## Experience
