@@ -14,7 +14,7 @@
 
 ## 一句话定位
 
-10 年技术 + 团队管理经验, 近 1 年深入 AI 工程化, **独立设计并落地了一套 AI 研发工作流方法论** ([claude-code-workflow](https://github.com/Caspian-Sun/claude-code-workflow)), 已在前端 (React/UmiJS) 与桌面 (Tauri + Rust) 两个完全不同的形态上跑通生产级项目。
+10 年技术 + 团队管理经验, 近 1 年深入 AI 工程化, **独立设计并落地了一套 AI 研发工作流方法论** ([claude-code-workflow](https://github.com/Caspian-Sun/claude-code-workflow)), 已在 **3 个完全不同的形态**上跑通生产级项目 —— 前端 (React/UmiJS) · 桌面 (Tauri + Rust) · 移动 (Flutter)。
 
 擅长把通用 AI 能力封装成具体行业可用的工程方案 —— 这正是 FDE 岗位的核心能力。
 
@@ -43,8 +43,11 @@
 
 - **8 步法 + 硬闸门** — `/prd → /plan → /code → /test → /review → /build → /deploy → /release`, 配合 `prd-check` / `plan-check` 硬阻断, AI 不能默默跳过
 - **`@rules` 追溯链** — PRD 锚点 → 任务 ID → 源码 `@prd/@rules` → 测试 `it()`, 任何一环改动可向下游全扫
+- **质量左移 · 发版硬门禁** — 发版前自动拦截「不合规产物」「新业务规则零测试」, 不达标硬阻断, 防带病上线 (固化成脚本, 不靠 AI 自觉)
+- **自动化测试边界分诊** — 每条业务规则先判「可自动化 (单元/组件/状态)」vs「必须人工 (真实外部副作用/视觉/原生/性能)」, AI 不在不可测场景空转, 自动产出人工测试清单 — 知道「不测什么」和「测什么」同样重要
+- **需求输入契约 + 依赖图并行** — 外部需求按完备性在 PRD 入口一次性暴露缺口 (🔴阻塞/🟡默认/🟢后补), 把返工从 dev/test 左移; 任务按依赖图拓扑分层, 独立任务并行 spawn 子代理、共享文件串行收口, 多模块交付吞吐显著提升
 - **五件套架构** — Commands (决策) + Skills (脚本) + Subagents (并行/独立视角) + Hooks (静默守护) + Rules (长期约束), 边界清晰
-- **跨域可移植** — 框架本体一行没改, 已在多个完全不同的栈上跑通 (见 `docs/ADAPTING.md` 跨工种适配清单)
+- **跨域可移植** — 框架本体一行没改, 已在 3 个完全不同的栈上跑通 (前端/桌面/移动, 见 `docs/ADAPTING.md` 跨工种适配清单)
 - 开源 + 中英双语 + 完整 GitHub 包装 (badges / LICENSE / contribution guide)
 
 🔗 https://github.com/Caspian-Sun/claude-code-workflow

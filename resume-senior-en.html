@@ -211,7 +211,7 @@
   </div>
 
   <div class="pitch">
-    10-year full-stack engineer and team lead. Spent the past year designing and shipping an open-source AI R&D methodology (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>) and applying it, unchanged, across different stacks — <b>React/UmiJS (web) and Tauri + Rust (desktop)</b>. I turn generic AI capabilities into production engineering workflows for specific verticals — exactly what an FDE does.
+    10-year full-stack engineer and team lead. Spent the past year designing and shipping an open-source AI R&D methodology (<a href="https://github.com/Caspian-Sun/claude-code-workflow">claude-code-workflow</a>) and applying it, unchanged, across <b>3 entirely different stacks — React/UmiJS (web), Tauri + Rust (desktop), and Flutter (mobile)</b>. I turn generic AI capabilities into production engineering workflows for specific verticals — exactly what an FDE does.
   </div>
 
   <h2>Highlights</h2>
@@ -237,8 +237,11 @@
       <li><b>Why this is FDE work</b>: This whole project is a Forward Deployed engagement with my own team — taking a generic AI capability (Claude Code CLI) and turning it into a production workflow for a specific vertical (software R&D).</li>
       <li><b>8-step SDLC pipeline</b> (<code>/prd → /plan → /code → /test → /review → /build → /deploy → /release</code>) with hard gates (<code>prd-check</code>, <code>plan-check</code>) that AI cannot silently skip</li>
       <li><b>Traceability chain</b>: PRD anchor → task ID → source <code>@prd/@rules</code> → test <code>it()</code>. Change any link, scan downstream automatically.</li>
+      <li><b>Shift-left release gates</b>: auto-block non-compliant build artifacts and new business rules shipped with zero tests — hard-fail below bar, codified as scripts (not left to AI discretion)</li>
+      <li><b>Automation-boundary triage</b>: classify each business rule as automatable vs manual-only (real external side-effects / visual / native / performance) — the AI never spins on un-testable cases, it emits a manual-test checklist. <i>Knowing what NOT to test matters as much as what to test.</i></li>
+      <li><b>Requirement-intake contract + dependency-graph parallelism</b>: surface requirement gaps up front at the PRD stage (shifting rework out of dev/test); topologically layer tasks and run independent ones via parallel subagents with serialized shared-file reconciliation</li>
       <li><b>Five-part architecture</b>: Commands (decisions) + Skills (scripts) + Subagents (parallel/isolated context) + Hooks (silent guards) + Rules (long-term constraints)</li>
-      <li><b>Cross-domain portable</b>: Same framework powers different projects (frontend/desktop) without a single line of core rewrite</li>
+      <li><b>Cross-domain portable</b>: Same framework powers 3 stacks (web / desktop / mobile) without a single line of core rewrite</li>
       <li>Open source · MIT license · bilingual EN/ZH docs · full GitHub packaging</li>
     </ul>
   </div>

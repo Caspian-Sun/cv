@@ -121,9 +121,10 @@ hard gates and a traceability chain, built to solve two systemic problems
 with AI in engineering: "AI has no constraints" and "AI has no memory."
 
 ▍ Cross-stack validation
-I applied the same framework, unchanged, across different stacks:
+I applied the same framework, unchanged, across 3 entirely different stacks:
 - React / UmiJS web admin (reference implementation)
 - Tauri + Rust desktop dev tool (Spider — public repo)
+- Flutter mobile app (production)
 
 ▍ Engineering foundation
 10 years of full-stack work + frontend teams of 20+ engineers. Verticals

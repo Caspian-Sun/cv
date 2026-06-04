@@ -9,7 +9,7 @@
 
 ## Summary
 
-10-year full-stack engineer and team lead who spent the last year building an **AI-driven R&D methodology** ([`claude-code-workflow`](https://github.com/Caspian-Sun/claude-code-workflow)) and applying it across different stacks — React/UmiJS (web) and Tauri + Rust (desktop).
+10-year full-stack engineer and team lead who spent the last year building an **AI-driven R&D methodology** ([`claude-code-workflow`](https://github.com/Caspian-Sun/claude-code-workflow)) and applying it across **3 entirely different stacks** — React/UmiJS (web), Tauri + Rust (desktop), and Flutter (mobile).
 
 I specialize in turning generic AI capabilities (Claude, GPT, Gemini) into production-grade engineering workflows for specific verticals — exactly what a Forward Deployed Engineer does.
 
@@ -20,7 +20,8 @@ I specialize in turning generic AI capabilities (Claude, GPT, Gemini) into produ
 ## Highlights
 
 - **AI methodology**: Designed and shipped an 8-step SDLC framework with hard gates, traceability chain, and five-part collaboration architecture (commands / skills / subagents / hooks / rules). Open-sourced, bilingual (EN/ZH).
-- **Cross-stack proven**: The same methodology survives unchanged across TypeScript-only (UmiJS) and Rust + TS (Tauri) — different stacks, different platforms (Web / Desktop), different domains (admin / dev tools).
+- **Engineering judgment baked in**: shift-left release gates (block non-compliant artifacts / untested business rules), automation-boundary triage (knowing *what not to auto-test*), requirement-intake contract, and dependency-graph parallel execution — codified as enforceable scripts/rules, not left to AI discretion.
+- **Cross-stack proven**: The same methodology survives unchanged across 3 stacks — TypeScript (UmiJS web), Rust + TS (Tauri desktop), and Flutter (mobile) — different platforms, different domains.
 - **Frontend depth**: 8 years of low-code platform + design system experience, including a self-built low-code platform (ServerUI) and a refactor of Formily for visual form design at scale.
 - **People leadership**: Led frontend teams of 20+ engineers (Pinming, Lanzhong), owned hiring, code review, perf reviews, technical roadmap.
 - **Cross-discipline background**: BA in Fine Arts + minor in CS — strong design intuition, useful for AI-assisted design tooling work.
@@ -37,8 +38,11 @@ I specialize in turning generic AI capabilities (Claude, GPT, Gemini) into produ
 
 - **8-step SDLC pipeline** (`/prd → /plan → /code → /test → /review → /build → /deploy → /release`) with hard gates (`prd-check`, `plan-check`) that AI cannot silently skip
 - **Traceability chain**: PRD anchor → task ID → source `@prd/@rules` → test `it()`. Change any link, scan downstream automatically.
+- **Shift-left release gates**: auto-block "non-compliant build artifacts" and "new business rules shipped with zero tests" — hard-fail below bar, codified as scripts (not left to AI discretion) to stop shipping broken
+- **Automation-boundary triage**: classify each business rule as automatable (unit/component/state) vs manual-only (real external side-effects / visual / native / performance) — the AI never spins on un-testable cases; it emits a manual-test checklist instead. *Knowing what NOT to test matters as much as what to test.*
+- **Requirement-intake contract + dependency-graph parallelism**: scan external requirements for completeness and surface gaps up front at the PRD stage (blocking / default / defer), shifting rework left out of dev/test; topologically layer tasks and run independent ones via parallel subagents with serialized shared-file reconciliation, raising multi-module throughput
 - **Five-part architecture**: Commands (decisions) + Skills (scripts) + Subagents (parallel/isolated context) + Hooks (silent guards) + Rules (long-term constraints)
-- **Cross-domain portable**: Same framework powers different projects (frontend / desktop) without a single line of core code rewrite
+- **Cross-domain portable**: Same framework powers 3 stacks (web / desktop / mobile) without a single line of core code rewrite
 - Open-source · MIT license · bilingual docs · full GitHub packaging
 
 🔗 https://github.com/Caspian-Sun/claude-code-workflow

@@ -71,8 +71,8 @@ Rust + React.
 
 ### 🧰 Stack range
 
-`TypeScript` · `Rust` · `Go` · `Python` · `Java` · `Node`
-React · UmiJS · Tauri · Vue · Ant Design
+`TypeScript` · `Rust` · `Go` · `Python` · `Java` · `Node` · `Dart`
+React · UmiJS · Tauri · Flutter · Vue · Ant Design
 
 ---
 

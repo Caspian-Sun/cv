@@ -16,8 +16,8 @@ framework with hard gates, traceability chain, and a five-part collaboration
 architecture (commands / skills / subagents / hooks / rules).
 
 What makes the methodology interesting is that I didn't just publish docs.
-I applied it across different stacks and domains without rewriting the core:
-a UmiJS/React admin frontend and a Tauri + Rust desktop dev tool (Spider).
+I applied it, unchanged, across 3 entirely different stacks and domains:
+a UmiJS/React admin frontend, a Tauri + Rust desktop dev tool (Spider), and a Flutter mobile app.
 
 Before AI, I led frontend teams of 20+ engineers, built a self-hosted low-code
 platform (ServerUI) that runs Vue, React, and Angular on the same page with
@@ -124,8 +124,8 @@ wanted to reach out directly.
 The short version: I spent the last year designing and shipping an
 open-source AI R&D methodology (claude-code-workflow) — an 8-step SDLC
 framework with hard gates and traceability chain. The interesting part
-is that I've already applied it across different stacks (React /
-Rust+Tauri) and different domains, without rewriting the core.
+is that I've already applied it across 3 different stacks (React /
+Rust+Tauri / Flutter) and different domains, without rewriting the core.
 
 This is essentially the FDE job — taking generic AI capabilities and
 deploying them into specific verticals. I'd love to do this at [Company]
