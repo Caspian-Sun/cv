@@ -59,6 +59,15 @@ A dogfooding + self-referential engineering case. Proves the framework is self-c
 
 🔗 https://github.com/Caspian-Sun/spider
 
+### 3. Cross-platform Mobile App — the methodology's 3rd production stack (commercial · NDA)
+
+> Applied the methodology (Project 1) to a third — and the hardest — stack: Flutter mobile. A real, shipping, continuously-iterated production app.
+
+- **Stack**: Flutter 3 + Dart 3 · Riverpod · go_router · multi-module feature architecture · full CI/CD (build → multi-channel release)
+- **Methodology reused unchanged**: the same 8-step pipeline + `@prd/@rules` traceability chain runs as-is on Flutter/Dart (only comment-syntax adaptation) — proving the framework is decoupled from language/platform
+- **Fed back into the framework**: this project's real delivery pressure drove the latest round of hardening — shift-left release gates (stop shipping broken), automation-boundary triage, and dependency-graph parallel execution. **"Ship a real project → distill it into reusable engineering" is the core FDE move.**
+- Commercial project, no public repo (implementation details on request)
+
 ---
 
 ## Experience
