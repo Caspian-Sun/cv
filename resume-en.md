@@ -59,18 +59,28 @@ A dogfooding + self-referential engineering case. Proves the framework is self-c
 
 🔗 https://github.com/Caspian-Sun/spider
 
-### 3. Cross-platform Mobile App — the methodology's 3rd production stack (commercial · NDA)
+### 3. Web3 Multi-platform Wallet / RWA · DApp (mobile) — the methodology's 3rd stack (Qulian · commercial)
 
-> Applied the methodology (Project 1) to a third — and the hardest — stack: Flutter mobile. A real, shipping, continuously-iterated production app.
+> Applied the methodology (Project 1) to a third — and the hardest — stack: Web3 cross-platform mobile. A real, shipping Flutter app (Android / iOS / HarmonyOS) — wallet / RWA / DApp.
 
 - **Stack**: Flutter 3 + Dart 3 · Riverpod · go_router · multi-module feature architecture · full CI/CD (build → multi-channel release)
-- **Methodology reused unchanged**: the same 8-step pipeline + `@prd/@rules` traceability chain runs as-is on Flutter/Dart (only comment-syntax adaptation) — proving the framework is decoupled from language/platform
-- **Fed back into the framework**: this project's real delivery pressure drove the latest round of hardening — shift-left release gates (stop shipping broken), automation-boundary triage, and dependency-graph parallel execution. **"Ship a real project → distill it into reusable engineering" is the core FDE move.**
+- **Full-stack from protocol to UI**: in-house Web3 transaction library (construct / sign / broadcast) + the full "wallet connect → sign → on-chain interaction" path
+- **Methodology reused unchanged**: the same 8-step pipeline + `@prd/@rules` traceability chain runs as-is on Flutter/Dart — proving the framework is decoupled from language/platform
+- **Fed back into the framework**: this project's real delivery pressure drove the latest round of hardening — shift-left release gates, automation-boundary triage, and dependency-graph parallel execution. **"Ship a real project → distill it into reusable engineering" is the core FDE move.**
 - Commercial project, no public repo (implementation details on request)
 
 ---
 
 ## Experience
+
+### Qulian Technology (Hyperchain) | Web3 Frontend Engineer (core dev) | Sep 2025 - Present
+
+Owned Web3 frontend plus low-level blockchain transaction protocol — spanning Web3 products, RWA, DApps, and multi-platform wallets.
+
+- Built a **Web3 protocol transaction library** — low-level tx construction / signing / broadcasting, packaged as an internal SDK and reused across business lines as the unified on-chain entry point
+- Fluent across the mainstream **Web3 stack** (ethers.js / viem / wagmi / web3.js / WalletConnect v2), covering the full path: wallet connect → tx signing → contract / on-chain interaction
+- Core developer on multiple **Web3 products / RWA / DApps**, shipping full-stack from protocol layer to UI
+- Led frontend for a **multi-platform wallet app** (Android / iOS / HarmonyOS, Flutter cross-platform)
 
 ### Youzan / Zhiqing Information Tech | Frontend Engineer | Nov 2024 - Apr 2025
 

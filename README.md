@@ -32,7 +32,7 @@ Open to remote · based in Hangzhou, China · willing to relocate · 1-week noti
 
 - **[claude-code-workflow](https://github.com/Caspian-Sun/claude-code-workflow)** — AI R&D methodology framework. 8-step SDLC with hard gates, `@rules` traceability chain, five-part collaboration architecture. Plus shift-left release gates, automation-boundary triage (knowing what *not* to auto-test), a requirement-intake contract, and dependency-graph parallel execution. Proven unchanged across **3 stacks** — web (React/UmiJS) · desktop (Tauri + Rust) · mobile (Flutter). Open source, bilingual.
 - **[spider](https://github.com/Caspian-Sun/spider)** — Tauri 2 + Rust desktop tool that visualizes any claude-code-workflow repo as a kanban. A meta-tool: built with the methodology to render the methodology.
-- **Cross-platform mobile app** *(commercial · NDA · no public repo)* — the methodology's 3rd production stack: Flutter 3 + Dart 3, Riverpod, go_router, full CI/CD. The same `@prd/@rules` pipeline runs unchanged on Dart; this project's real delivery pressure drove the framework's latest hardening (release gates, automation-boundary triage, dependency-graph parallelism).
+- **Web3 multi-platform wallet / RWA · DApp** *(Qulian · commercial · no public repo)* — the methodology's 3rd production stack: Flutter 3 + Dart 3 (Android / iOS / HarmonyOS), Riverpod, go_router, full CI/CD, plus an in-house Web3 transaction library. The same `@prd/@rules` pipeline runs unchanged on Dart; this project's real delivery pressure drove the framework's latest hardening (release gates, automation-boundary triage, dependency-graph parallelism).
 
 ---
 
